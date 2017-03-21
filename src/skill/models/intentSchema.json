@@ -4,28 +4,7 @@
       "intent": "UnrecognizedIntent"
     },
     {
-      "intent": "ResetStateIntent"
-    },
-    {
-      "intent": "RestoreStateIntent"
-    },
-    {
       "intent": "RepeatOptionsIntent"
-    },
-    {
-      "intent": "RepeatSceneIntent"
-    },
-    {
-      "intent": "GoBackIntent"
-    },
-    {
-      "intent": "AMAZON.HelpIntent"
-    },
-    {
-      "intent": "AMAZON.StopIntent"
-    },
-    {
-      "intent": "AMAZON.CancelIntent"
     },
     {
       "intent": "BeginIntent"
@@ -43,7 +22,28 @@
       "intent": "OpenDoorFourIntent"
     },
     {
+      "intent": "OpenDoorIntent"
+    },
+    {
       "intent": "OpenDoorFiveIntent"
+    },
+    {
+      "intent": "AMAZON:PreviousIntent"
+    },
+    {
+      "intent": "AMAZON.RepeatIntent"
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "AMAZON.CancelIntent"
+    },
+    {
+      "intent": "AMAZON.StartOverIntent"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
     }
   ]
 }

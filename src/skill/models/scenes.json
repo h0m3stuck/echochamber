@@ -68,6 +68,12 @@
           "open door 4"
         ],
         "sceneId": 5
+      },
+      {
+        "sceneId": 7,
+        "utterances": [
+          "open door"
+        ]
       }
     ]
   },
@@ -176,6 +182,26 @@
     "voice": {
       "intro": "You win!",
       "prompt": "If you would like to play again say, \"Start again.\" Otherwise you can say \"Exit skill.\""
+    },
+    "options": []
+  },
+  {
+    "id": 7,
+    "color": "default",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": false,
+    "card": {
+      "title": "Room",
+      "text": "You enter a room.",
+      "image": {
+        "smallImageUrl": null,
+        "largeImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You enter a room. What would you like to do?",
+      "prompt": ""
     },
     "options": []
   }

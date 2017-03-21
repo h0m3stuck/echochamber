@@ -1,74 +1,29 @@
 'use strict'
 
-var AlexaSkill = require('../AlexaSkill')
-var dynamo = require('./dynamoDB')
-
 module.exports = {
-
-  readSceneWithCard: function ( scene, session, response ) {
-    var json = buildResponse( scene )
-    dynamo.putUserState( session, function ( data ) {
-      console.log( data.message )
-      response.askWithCard(
-        json.speechOutput,
-        json.repromptOutput,
-        json.cardTitle,
-        json.cardOutput,
-        json.cardImage
-      )
-    })
-  },
-
-  exitWithCard: function ( scene, session, response ) {
-    var json = buildResponse( scene )
-    dynamo.putUserState( session, function ( data ) {
-      console.log( data.message )
-      response.tellWithCard(
-        json.speechOutput,
-        json.cardTitle,
-        json.cardOutput,
-        json.cardImage
-      )
-    })
+  getResponse: function (scene){
+    return buildResponse(scene)
   }
-
 }
 
 function buildResponse ( scene ){
-
   var voicePrompt = scene.voice.prompt.trim() || buildPrompt( scene, true )
   var cardPrompt  = scene.card.prompt.trim()  || buildPrompt( scene, false )
 
   return {
-
     // initial text spoken by Alexa
-    speechOutput: {
-      type: AlexaSkill.SPEECH_OUTPUT_TYPE.SSML,
-      ssml: '<speak>' +
-            scene.voice.intro.trim() +
-            '<break time="200ms"/>' +
-            voicePrompt +
-            '</speak>'
-    },
+    // TODO: confirm the type below
+    speechOutput: scene.voice.intro.trim() + '<break time="200ms"/>' + voicePrompt,
 
     // reprompt is played if there's 7 seconds of silence
-    repromptOutput: {
-      type: AlexaSkill.SPEECH_OUTPUT_TYPE.SSML,
-      ssml: '<speak>' +
-            'I\'m sorry.<break time="200ms"/>' +
-            voicePrompt +
-            '</speak>'
-    },
+    repromptOutput: 'I\'m sorry.<break time="200ms"/>' + voicePrompt,
 
     cardTitle:  scene.card.title || config.skillName,
     cardOutput: scene.card.text.trim() +
               ( scene.card.text.trim() && cardPrompt ? ' ' : '' ) +
                 cardPrompt,
-
     cardImage: scene.card.image || null
-
   }
-
 }
 
 function buildPrompt ( scene, isForSpeech ) {

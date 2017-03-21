@@ -1,33 +1,31 @@
 'use strict'
 
+// TODO: QA opening multiple doors, and all other things really
+// TODO: the figure out how to incorporate state so that you can have intents with the same name in multiple scenes
+
 var config = require('../models/config')
-var skill = require('../index').skill
+var skill = require('../index').Alexa
 var respond = require('./respond')
 var utils = require('./utils')
 
-function processUtterance ( intent, session, request, response, utterance ) {
+function processUtterance ( Alexa, utterance ) {
+  console.log("processUtterance");
 
   utterance = ( utterance || '' ).toLowerCase()
 
-  var intentHandlers = skill.intentHandlers
 
-  Object.keys( config.commands ).forEach( function ( intentName ) {
-    if ( utils.getCommandsForIntent( intentName) .indexOf( utterance ) > -1 ) {
-      intentHandlers[ intentName ]( intent, session, request, response )
-      return // exit
-    }
-  })
+  console.log(Alexa);
+  console.log(Alexa.event);
 
-  var currentScene = utils.findResponseBySceneId( session.attributes.currentSceneId )
+  var currentScene = utils.findResponseBySceneId( Alexa.event.session.attributes.currentSceneId )
 
   if (!currentScene || !currentScene.options) {
-    intentHandlers["LaunchIntent"](intent, session, request, response)
-    return
+    Alexa.emit('LaunchRequest');
   }
 
   // incase this scene uses the previous scenes options
   if ( currentScene.readPreviousOptions ) {
-    var previousSceneId = session.attributes.breadcrumbs[ session.attributes.breadcrumbs.length -1 ]
+    var previousSceneId = Alexa.event.session.attributes.breadcrumbs[ Alexa.event.session.attributes.breadcrumbs.length -1 ]
     currentScene = utils.findResponseBySceneId( previousSceneId )
   }
 
@@ -37,17 +35,14 @@ function processUtterance ( intent, session, request, response, utterance ) {
 
   // option found
   if ( option ) {
-    var nextScene = utils.findNextScene( currentScene, option );
-    session.attributes.breadcrumbs.push( currentScene.id )
-    session.attributes.currentSceneId = nextScene.id
-    respond.readSceneWithCard( nextScene, session, response )
-  }
+    var nextScene = utils.findNextScene(currentScene, option);
+    // Alexa.attributes['breadcrumbs'] = Alexa.event.session.attributes.breadcrumbs.push(currentScene.id);
+    Alexa.event.session.attributes.breadcrumbs.push(currentScene.id);
+    Alexa.attributes['currentSceneId'] = nextScene.id;
 
-  // no match
-  else {
-    intentHandlers.UnrecognizedIntent( intent, session, request, response )
+    var json = respond.getResponse(nextScene);
+    Alexa.emit(":askWithCard", json.speechOutput, json.repromptOutput, json.cardTitle, json.cardOutput, json.cardImage);
   }
-
 }
 
 module.exports = processUtterance

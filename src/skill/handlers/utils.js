@@ -1,5 +1,7 @@
 'use strict'
 
+// TODO: need to add alexa-sdk dyamoDB support saving session
+
 var config = require('../models/config.json')
 var scenes = require('../models/scenes.json')
 

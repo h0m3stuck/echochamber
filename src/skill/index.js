@@ -2,22 +2,19 @@
 
 require('./polyfills')
 
-var AlexaSkill = require('./AlexaSkill')
+var Alexa = require('alexa-sdk')
 var config = require('./models/config.json')
+var intentHandlers_generated = require('./handlers/intentHandlers_generated')
+var intentHandlers_default = require('./handlers/intentHandlers_default')
 
-// extends AlexaSkill
-var MySkill = function ( APP_ID ) { AlexaSkill.call( this, APP_ID ) }
-MySkill.prototype = Object.create( AlexaSkill.prototype )
-MySkill.prototype.constructor = MySkill
+exports.handler = function(event, context, callback) {
+    var alexa = Alexa.handler(event, context);
+    alexa.APP_ID = config.applicationId;
+    // To enable string internationalization (i18n) features, set a resources object.
 
-var skill = new MySkill( config.applicationId )
-
-module.exports.skill = skill
-module.exports.handler = skill.execute.bind( skill )
-
-skill.eventHandlers = require('./handlers/eventHandlers')
-skill.intentHandlers = Object.assign(
-  {},
-  require('./handlers/intentHandlers_generated'),
-  require('./handlers/intentHandlers_default')
-)
+    alexa.registerHandlers(
+		intentHandlers_default,
+		intentHandlers_generated
+		);
+    alexa.execute();
+};

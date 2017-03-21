@@ -5,106 +5,103 @@ var respond = require('./respond')
 
 var defaultIntentHandlers = {
 
-  "LaunchIntent": function ( intent, session, request, response ) {
-    session.attributes.breadcrumbs = []
-    session.attributes.currentSceneId = utils.findFirstScene().id
-    var scene = utils.findResponseBySceneId( session.attributes.currentSceneId )
-    respond.readSceneWithCard( scene, session, response )
+  // TODO: see if there is a better place than in config.json to set strings for repeatOptions
+  // TODO: unrecognized should be hunhandled and it should not be an intent in the model/intentSchema file
+  // TODO: Begin intent is pulled from the nodes curious that open triggers it.
+
+  "LaunchRequest": function () {
+    console.log("LaunchRequest");
+    this.attributes['breadcrumbs'] = [];
+    this.attributes['currentSceneId'] = utils.findFirstScene().id;
+    var scene = utils.findResponseBySceneId(this.event.session.attributes.currentSceneId);
+    
+    console.log("scene:");
+    console.log(scene);
+
+    var json = respond.getResponse(scene);
+    this.emit(":askWithCard", json.speechOutput, json.repromptOutput, json.cardTitle, json.cardOutput, json.cardImage);
   },
 
-  "GoBackIntent": function ( intent, session, request, response ) {
-    if ( session.attributes.isAskingToRestoreState ) {
-      return defaultIntentHandlers["UnrecognizedIntent"]( intent, session, request, response )
+  "AMAZON.PreviousIntent": function () {
+    if (this.event.session.attributes.breadcrumbs && this.event.session.attributes.breadcrumbs.length) {
+      this.attributes['currentSceneId'] = this.event.session.attributes.breadcrumbs.pop();
     }
-    if ( session.attributes.breadcrumbs && session.attributes.breadcrumbs.length ) {
-      session.attributes.currentSceneId = session.attributes.breadcrumbs.pop()
-    }
-    var scene = utils.findResponseBySceneId( session.attributes.currentSceneId )
-    respond.readSceneWithCard( scene, session, response )
+    var scene = utils.findResponseBySceneId(this.event.session.attributes.currentSceneId);
+
+    var json = respond.getResponse(scene);
+    this.emit(":askWithCard", json.speechOutput, json.repromptOutput, json.cardTitle, json.cardOutput, json.cardImage);
   },
 
-  "RepeatSceneIntent": function ( intent, session, request, response ) {
-    var scene
-    if ( session.attributes.isAskingToRestoreState ) {
-      scene = utils.findResponseByType('askToRestoreState')
-    }
-    else {
-      scene = utils.findResponseBySceneId( session.attributes.currentSceneId )
-      if ( scene.readPreviousOptions ) {
-        var previousScene = utils.findPreviousScene( session )
-        var index = previousScene.options.findIndex( function ( option ) {
-          return option.sceneId === scene.id
-        })
-        previousScene.options.splice( index , 1 ) // remove current option
-        scene.options = previousScene.options
-      }
-    }
-    respond.readSceneWithCard( scene, session, response )
+  "RepeatOptionsOnly": function () {
+    console.log("AMAZON.RepeatIntent");
+    var scene;
+    scene = utils.findResponseBySceneId(this.event.session.attributes.currentSceneId)
+    // This assumes you don't want to hear the intro and text, just the options.
+    scene.voice.intro = '';
+    scene.card.text = '';
+
+    var json = respond.getResponse(scene);
+    this.emit(":askWithCard", json.speechOutput, json.repromptOutput, json.cardTitle, json.cardOutput, json.cardImage);
   },
 
-  "RepeatOptionsIntent": function ( intent, session, request, response ) {
-    var scene
-    if ( session.attributes.isAskingToRestoreState ) {
-      scene = utils.findResponseByType('askToRestoreState')
+  "AMAZON.RepeatIntent": function () {
+    console.log("AMAZON.RepeatIntent");
+    scene = utils.findResponseBySceneId( session.attributes.currentSceneId )
+
+    // TODO: confirm that this previousOptions is only for hidden rooms. It probably is so that you can do all the things in the previous room metaphore might change 
+    if ( scene.readPreviousOptions ) {
+      var previousScene = utils.findPreviousScene( session )
+      var index = previousScene.options.findIndex( function ( option ) {
+        return option.sceneId === scene.id
+      })
+      previousScene.options.splice( index , 1 ) // remove current option
+      scene.options = previousScene.options
     }
-    else {
-      scene = utils.findResponseBySceneId( session.attributes.currentSceneId )
-    }
-    scene.voice.intro = ''
-    scene.card.text = ''
-    respond.readSceneWithCard( scene, session, response )
+    var json = respond.getResponse(scene);
+    this.emit(":askWithCard", json.speechOutput, json.repromptOutput, json.cardTitle, json.cardOutput, json.cardImage);
+  
   },
 
-  "UnrecognizedIntent": function ( intent, session, request, response ) {
-    var scene
-    var unrecognized = utils.findResponseByType('unrecognized')
-    if ( session.attributes.isAskingToRestoreState ) {
-      scene = utils.findResponseByType('askToRestoreState')
-      unrecognized.voice.prompt = scene.voice.prompt
-    }
-    else {
-      scene = utils.findResponseBySceneId( session.attributes.currentSceneId )
-      unrecognized.generateOptions = scene.generateOptions
-      unrecognized.voice.prompt = scene.voice.prompt
-      unrecognized.options = scene.options
-    }
-    respond.readSceneWithCard( unrecognized, session, response )
-  },
+  "Unrecognized": function () {
+    console.log("Unrecognized");
+    var scene;
+    var unrecognized = utils.findResponseByType('unrecognized');
+    
+    scene = utils.findResponseBySceneId(this.event.session.attributes.currentSceneId);
+    unrecognized.generateOptions = scene.generateOptions;
+    unrecognized.voice.prompt = scene.voice.prompt;
+    unrecognized.options = scene.options;
 
-  "ResetStateIntent": function ( intent, session, request, response ) {
-    session.attributes.breadcrumbs = []
-    delete session.attributes.isAskingToRestoreState
-    session.attributes.currentSceneId = utils.findFirstScene().id
-    var scene = utils.findResponseBySceneId( session.attributes.currentSceneId )
-    respond.readSceneWithCard( scene, session, response )
-  },
-
-  "RestoreStateIntent": function ( intent, session, request, response ) {
-    if ( session.attributes.isAskingToRestoreState ) {
-      // if asking to resume previous state
-      delete session.attributes.isAskingToRestoreState
-      defaultIntentHandlers["RepeatSceneIntent"]( intent, session, request, response )
-    }
-    else {
-      defaultIntentHandlers["UnrecognizedIntent"]( intent, session, request, response )
-    }
+    var json = respond.getResponse(unrecognized);
+    this.emit(":askWithCard", json.speechOutput, json.repromptOutput, json.cardTitle, json.cardOutput, json.cardImage);
   },
 
   // GLOBAL INTENTS
-  "AMAZON.HelpIntent": function ( intent, session, request, response ) {
-    var help = utils.findResponseByType('help')
-    respond.readSceneWithCard( help, session, response )
+  "AMAZON.HelpIntent": function () {
+    var help = utils.findResponseByType('help');
+    var json = respond.getResponse(help);
+    this.emit(":askWithCard", json.speechOutput, json.repromptOutput, json.cardTitle, json.cardOutput, json.cardImage);
   },
 
-  "AMAZON.CancelIntent": function ( intent, session, request, response ) {
-    defaultIntentHandlers["AMAZON.StopIntent"]( intent, session, request, response )
+  "AMAZON.CancelIntent": function () {
+    this.emit("AMAZON.StopIntent");
   },
 
-  "AMAZON.StopIntent": function ( intent, session, request, response ) {
-    var exit = utils.findResponseByType('exit')
-    respond.exitWithCard( exit, session, response )
+  "AMAZON.StartOverIntent": function(){
+    session.attributes.breadcrumbs = [];
+    session.attributes.currentSceneId = utils.findFirstScene().id;
+    var scene = utils.findResponseBySceneId(session.attributes.currentSceneId);
+
+    var json = respond.getResponse(help);
+    this.emit(":askWithCard", json.speechOutput, json.repromptOutput, json.cardTitle, json.cardOutput, json.cardImage);
+  },
+
+  "AMAZON.StopIntent": function () {
+    var exit = utils.findResponseByType('exit');
+    var json = respond.getResponse(exit);
+    this.emit(":tellWithCard", json.speechOutput, json.cardTitle, json.cardOutput, json.cardImage);
   }
-
+  // TODO: consider adding yes and no intents once states are added.
 }
 
 module.exports = defaultIntentHandlers

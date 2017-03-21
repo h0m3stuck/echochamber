@@ -57,6 +57,26 @@ gulp.task('generate', function ( cb ) {
       }
     }
 
+    // add the default intents
+    var defaultIntents = [
+      "AMAZON:PreviousIntent",
+      "AMAZON.RepeatIntent",
+      "AMAZON.HelpIntent",
+      "AMAZON.CancelIntent",
+      "AMAZON.StartOverIntent",
+      "AMAZON.StopIntent"
+    ];
+
+    for ( var i in defaultIntents ) {
+      var name = defaultIntents[i];
+      var intentExists = intentSchema.intents.find( function ( intent ) {
+        return ( intent.intent === name )
+      })
+      if ( ! intentExists ) {
+        intentSchema.intents.push({ intent: name, })
+      }
+    }
+
     // write generated intents
     functionDefsWriteStream = fs.createWriteStream('./src/skill/handlers/intentHandlers_generated.js')
     functionDefsWriteStream.on('open', function () {
@@ -97,8 +117,8 @@ function createIntentName ( utterance ) {
 }
 
 function createFunctionDefinition ( intentName, utterance ) {
-  return 'function ( intent, session, request, response ) {\n'
-  + '\t\tprocessUtterance( intent, session, request, response, "' + utterance + '" )\n'
+  return 'function () {\n'
+  + '\t\tprocessUtterance(this, "' + utterance + '" )\n'
   + '\t},\n'
 }
 

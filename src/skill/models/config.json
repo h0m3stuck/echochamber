@@ -2,37 +2,12 @@
   "applicationId": null,
   "awsProfileName": "",
   "skillName": "My Alexa Skill",
-  "lambdaName": "MyAlexaSkillLambdaFunction",
-  "dynamoTableName": "MyAlexaSkillTable",
+  "lambdaName": "adventureTool_david",
+  "dynamoTableName": "",
   "dynamoRegion": "us-east-1",
   "commands": {
-    "ResetStateIntent": [
-      "reset skill",
-      "start again",
-      "reset"
-    ],
-    "RestoreStateIntent": [
-      "resume skill",
-      "resume"
-    ],
     "RepeatOptionsIntent": [
       "repeat options"
-    ],
-    "RepeatSceneIntent": [
-      "repeat scene",
-      "repeat"
-    ],
-    "GoBackIntent": [
-      "go back"
-    ],
-    "AMAZON.HelpIntent": [
-      "help"
-    ],
-    "AMAZON.StopIntent": [
-      "exit skill"
-    ],
-    "AMAZON.CancelIntent": [
-      "exit skill"
     ]
   },
   "responses": {
