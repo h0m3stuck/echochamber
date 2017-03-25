@@ -1,4 +1,5 @@
 'use strict'
+var config = require('../models/config')
 
 module.exports = {
   getResponse: function (scene){
