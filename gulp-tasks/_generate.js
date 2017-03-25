@@ -59,7 +59,7 @@ gulp.task('generate', function ( cb ) {
 
     // add the default intents
     var defaultIntents = [
-      "AMAZON:PreviousIntent",
+      "AMAZON.PreviousIntent",
       "AMAZON.RepeatIntent",
       "AMAZON.HelpIntent",
       "AMAZON.CancelIntent",
