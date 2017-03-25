@@ -13,10 +13,6 @@ function processUtterance ( Alexa, utterance ) {
 
   utterance = ( utterance || '' ).toLowerCase()
 
-
-  console.log(Alexa);
-  console.log(Alexa.event);
-
   var currentScene = utils.findResponseBySceneId( Alexa.event.session.attributes.currentSceneId )
 
   if (!currentScene || !currentScene.options) {
