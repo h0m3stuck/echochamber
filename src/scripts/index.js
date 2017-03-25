@@ -74,7 +74,18 @@ function save ( upload ) {
 
   var payload = { config, scenes }
   if ( upload ) payload.upload = true
+
+  payload.scenes.forEach( function (scene)  {
+    scene.options.forEach( function (option) {
+      for (var u in option.utterances){
+        option.utterances[u] = option.utterances[u].toLowerCase();
+      }
+    })
+  })
+
   var json = JSON.stringify( payload, null, 2 )
+
+
 
   var httpRequest = new XMLHttpRequest()
   httpRequest.onreadystatechange = onReadyStateChange
