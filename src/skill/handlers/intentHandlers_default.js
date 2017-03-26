@@ -6,7 +6,6 @@ var respond = require('./respond')
 var defaultIntentHandlers = {
 
   // TODO: see if there is a better place than in config.json to set strings for repeatOptions
-  // TODO: unrecognized should be hunhandled and it should not be an intent in the model/intentSchema file
   // TODO: Begin intent is pulled from the nodes curious that open triggers it.
 
   "LaunchRequest": function () {

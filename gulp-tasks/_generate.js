@@ -14,14 +14,8 @@ gulp.task('generate', function ( cb ) {
     var functionDefs = {}
     var utterances = []
 
-    intentSchema.intents = [{ intent: 'UnhandledIntent' }]
-    utterances.push.apply( utterances, [
-      'UnhandledIntent ThisIsPurposlyNonSense',
-      'UnhandledIntent ThisIsPurposlyNonSense ThisIsPurposlyNonSense',
-      'UnhandledIntent ThisIsPurposlyNonSense ThisIsPurposlyNonSense ThisIsPurposlyNonSense',
-      'UnhandledIntent ThisIsPurposlyNonSense ThisIsPurposlyNonSense ThisIsPurposlyNonSense ThisIsPurposlyNonSense',
-      'UnhandledIntent ThisIsPurposlyNonSense ThisIsPurposlyNonSense ThisIsPurposlyNonSense ThisIsPurposlyNonSense ThisIsPurposlyNonSense'
-    ])
+    intentSchema.intents = []
+    
 
     // process commands from config.json
     Object.keys( config.commands ).forEach( function( intent ) {
