@@ -9,7 +9,7 @@ var respond = require('./respond')
 var utils = require('./utils')
 
 function processUtterance ( Alexa, utterance ) {
-  console.log("processUtterance");
+  console.log("processUtterance, utterance: " + utterance);
 
   utterance = ( utterance || '' ).toLowerCase()
 
@@ -30,6 +30,7 @@ function processUtterance ( Alexa, utterance ) {
   })
 
   // option found
+  // TODO: this check is probably better handled by using states.
   if ( option ) {
     var nextScene = utils.findNextScene(currentScene, option);
     // Alexa.attributes['breadcrumbs'] = Alexa.event.session.attributes.breadcrumbs.push(currentScene.id);
@@ -38,6 +39,8 @@ function processUtterance ( Alexa, utterance ) {
 
     var json = respond.getResponse(nextScene);
     Alexa.emit(":askWithCard", json.speechOutput, json.repromptOutput, json.cardTitle, json.cardOutput, json.cardImage);
+  } else {
+    Alexa.emit("Unhandled")
   }
 }
 
