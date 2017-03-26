@@ -85,8 +85,6 @@ function save ( upload ) {
 
   var json = JSON.stringify( payload, null, 2 )
 
-
-
   var httpRequest = new XMLHttpRequest()
   httpRequest.onreadystatechange = onReadyStateChange
   httpRequest.open('POST','/persist')

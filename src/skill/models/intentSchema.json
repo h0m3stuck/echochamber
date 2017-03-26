@@ -1,9 +1,6 @@
 {
   "intents": [
     {
-      "intent": "UnrecognizedIntent"
-    },
-    {
       "intent": "RepeatOptionsIntent"
     },
     {
@@ -28,7 +25,7 @@
       "intent": "OpenDoorFiveIntent"
     },
     {
-      "intent": "AMAZON:PreviousIntent"
+      "intent": "AMAZON.PreviousIntent"
     },
     {
       "intent": "AMAZON.RepeatIntent"
