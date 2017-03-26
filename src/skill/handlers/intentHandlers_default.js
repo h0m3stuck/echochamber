@@ -62,17 +62,17 @@ var defaultIntentHandlers = {
   
   },
 
-  "Unrecognized": function () {
-    console.log("Unrecognized");
+  "Unhandled": function () {
+    console.log("Unhandled");
     var scene;
-    var unrecognized = utils.findResponseByType('unrecognized');
+    var unhandled = utils.findResponseByType('unhandled');
     
     scene = utils.findResponseBySceneId(this.event.session.attributes.currentSceneId);
-    unrecognized.generateOptions = scene.generateOptions;
-    unrecognized.voice.prompt = scene.voice.prompt;
-    unrecognized.options = scene.options;
+    unhandled.generateOptions = scene.generateOptions;
+    unhandled.voice.prompt = scene.voice.prompt;
+    unhandled.options = scene.options;
 
-    var json = respond.getResponse(unrecognized);
+    var json = respond.getResponse(unhandled);
     this.emit(":askWithCard", json.speechOutput, json.repromptOutput, json.cardTitle, json.cardOutput, json.cardImage);
   },
 
