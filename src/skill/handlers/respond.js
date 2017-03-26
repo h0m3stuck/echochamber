@@ -17,6 +17,7 @@ function buildResponse ( scene ){
     speechOutput: scene.voice.intro.trim() + '<break time="200ms"/>' + voicePrompt,
 
     // reprompt is played if there's 7 seconds of silence
+    // TODO: should be able to write the "I'm sorry" phrase somewhere.
     repromptOutput: 'I\'m sorry.<break time="200ms"/>' + voicePrompt,
 
     cardTitle:  scene.card.title || config.skillName,

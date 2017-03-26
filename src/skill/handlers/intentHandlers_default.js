@@ -4,9 +4,7 @@ var utils = require('./utils')
 var respond = require('./respond')
 
 var defaultIntentHandlers = {
-
-  // TODO: see if there is a better place than in config.json to set strings for repeatOptions
-  // TODO: Begin intent is pulled from the nodes curious that open triggers it.
+  // TODO: what is up with "Prompt with Previous Scene's Options" (PreviousOptions)
 
   "LaunchRequest": function () {
     console.log("LaunchRequest");
@@ -47,7 +45,7 @@ var defaultIntentHandlers = {
     console.log("AMAZON.RepeatIntent");
     scene = utils.findResponseBySceneId( session.attributes.currentSceneId )
 
-    // TODO: confirm that this previousOptions is only for hidden rooms. It probably is so that you can do all the things in the previous room metaphore might change 
+    // TODO: When is readPreviousOptions used?
     if ( scene.readPreviousOptions ) {
       var previousScene = utils.findPreviousScene( session )
       var index = previousScene.options.findIndex( function ( option ) {
@@ -87,11 +85,12 @@ var defaultIntentHandlers = {
   },
 
   "AMAZON.StartOverIntent": function(){
-    session.attributes.breadcrumbs = [];
-    session.attributes.currentSceneId = utils.findFirstScene().id;
-    var scene = utils.findResponseBySceneId(session.attributes.currentSceneId);
+    console.log(this.session)
+    this.attributes.breadcrumbs = [];
+    this.attributes.currentSceneId = utils.findFirstScene().id;
+    var scene = utils.findResponseBySceneId(this.attributes.currentSceneId);
 
-    var json = respond.getResponse(help);
+    var json = respond.getResponse(scene);
     this.emit(":askWithCard", json.speechOutput, json.repromptOutput, json.cardTitle, json.cardOutput, json.cardImage);
   },
 
