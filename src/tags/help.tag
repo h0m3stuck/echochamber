@@ -23,7 +23,7 @@
             <p><strong>Ask to Resore State</strong>: This is Alexa’s response upon invoking the skill if a previous state is has been found within the Dynamo DB Table (defined in the AWS Settins section below.)</p>
           </li>
           <li>
-            <p><strong>Unrecognized</strong>: This is Alexa’s response when a command has not been matched to the options available.</p>
+            <p><strong>Unhandled</strong>: This is Alexa’s response when a command has not been matched to the options available.</p>
           </li>
           <li>
             <p><strong>Help</strong>: This is Alexa’s response when the user asks for help.</p>

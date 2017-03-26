@@ -30,13 +30,13 @@
         "prompt": "To continue from where you left off, say \"Resume Skill\". Otherwise, say \"Reset Skill\"."
       }
     },
-    "unrecognized": {
+    "unhandled": {
       "color": "default",
       "isHidden": false,
       "generateOptions": true,
       "readPreviousOptions": false,
       "card": {
-        "title": "Unrecognized command",
+        "title": "Unhandled command",
         "text": "Please repeat your command.",
         "prompt": "",
         "image": {
