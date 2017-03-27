@@ -19,6 +19,11 @@ var defaultIntentHandlers = {
     this.emit(":askWithCard", json.speechOutput, json.repromptOutput, json.cardTitle, json.cardOutput, json.cardImage);
   },
 
+  "SessionEndedRequest": function () {
+    console.log("SessionEndedRequest")
+    this.emit("AMAZON.StopIntent");
+  },
+
   "AMAZON.PreviousIntent": function () {
     if (this.event.session.attributes.breadcrumbs && this.event.session.attributes.breadcrumbs.length) {
       this.attributes['currentSceneId'] = this.event.session.attributes.breadcrumbs.pop();
@@ -30,7 +35,7 @@ var defaultIntentHandlers = {
   },
 
   "RepeatOptionsOnly": function () {
-    console.log("AMAZON.RepeatIntent");
+    console.log("RepeatOptionsOnly");
     var scene;
     scene = utils.findResponseBySceneId(this.event.session.attributes.currentSceneId)
     // This assumes you don't want to hear the intro and text, just the options.
@@ -59,6 +64,36 @@ var defaultIntentHandlers = {
   
   },
 
+  // GLOBAL INTENTS
+  "AMAZON.HelpIntent": function () {
+    console.log("HelpIntent")
+    var help = utils.findResponseByType('help');
+    var json = respond.getResponse(help);
+    this.emit(":askWithCard", json.speechOutput, json.repromptOutput, json.cardTitle, json.cardOutput, json.cardImage);
+  },
+
+  "AMAZON.CancelIntent": function () {
+    console.log("CancelIntent")
+    this.emit("AMAZON.StopIntent");
+  },
+
+  "AMAZON.StartOverIntent": function(){
+    console.log("StartOverIntent")
+    this.attributes.breadcrumbs = [];
+    this.attributes.currentSceneId = utils.findFirstScene().id;
+    var scene = utils.findResponseBySceneId(this.attributes.currentSceneId);
+
+    var json = respond.getResponse(scene);
+    this.emit(":askWithCard", json.speechOutput, json.repromptOutput, json.cardTitle, json.cardOutput, json.cardImage);
+  },
+
+  "AMAZON.StopIntent": function () {
+    console.log("StopIntent")
+    var exit = utils.findResponseByType('exit');
+    var json = respond.getResponse(exit);
+    this.emit(":tellWithCard", json.speechOutput, json.cardTitle, json.cardOutput, json.cardImage);
+  },
+
   "Unhandled": function () {
     console.log("Unhandled");
     var scene;
@@ -71,33 +106,6 @@ var defaultIntentHandlers = {
 
     var json = respond.getResponse(unhandled);
     this.emit(":askWithCard", json.speechOutput, json.repromptOutput, json.cardTitle, json.cardOutput, json.cardImage);
-  },
-
-  // GLOBAL INTENTS
-  "AMAZON.HelpIntent": function () {
-    var help = utils.findResponseByType('help');
-    var json = respond.getResponse(help);
-    this.emit(":askWithCard", json.speechOutput, json.repromptOutput, json.cardTitle, json.cardOutput, json.cardImage);
-  },
-
-  "AMAZON.CancelIntent": function () {
-    this.emit("AMAZON.StopIntent");
-  },
-
-  "AMAZON.StartOverIntent": function(){
-    console.log(this.session)
-    this.attributes.breadcrumbs = [];
-    this.attributes.currentSceneId = utils.findFirstScene().id;
-    var scene = utils.findResponseBySceneId(this.attributes.currentSceneId);
-
-    var json = respond.getResponse(scene);
-    this.emit(":askWithCard", json.speechOutput, json.repromptOutput, json.cardTitle, json.cardOutput, json.cardImage);
-  },
-
-  "AMAZON.StopIntent": function () {
-    var exit = utils.findResponseByType('exit');
-    var json = respond.getResponse(exit);
-    this.emit(":tellWithCard", json.speechOutput, json.cardTitle, json.cardOutput, json.cardImage);
   }
   // TODO: consider adding yes and no intents once states are added.
 }
