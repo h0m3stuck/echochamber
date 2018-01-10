@@ -40,8 +40,8 @@ module.exports = {
 	"GetACardIntent": function () {
 		processUtterance(this, "get a card" )
 	},
-	"Alexa,TellMeMoreAboutTheGreekSphinxIntent": function () {
-		processUtterance(this, "alexa, tell me more about the greek sphinx" )
+	"AlexaTellMeMoreAboutTheGreekSphinxIntent": function () {
+		processUtterance(this, "alexa tell me more about the greek sphinx" )
 	},
 	"ContinueIntent": function () {
 		processUtterance(this, "continue" )
@@ -49,8 +49,8 @@ module.exports = {
 	"ReturnIntent": function () {
 		processUtterance(this, "return" )
 	},
-	"Alexa,WhatIsGeometryIntent": function () {
-		processUtterance(this, "alexa, what is geometry" )
+	"AlexaWhatIsGeometryIntent": function () {
+		processUtterance(this, "alexa what is geometry" )
 	},
 	"EnterTheLairIntent": function () {
 		processUtterance(this, "enter the lair" )

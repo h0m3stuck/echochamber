@@ -386,8 +386,12 @@
       {
         "sceneId": 12,
         "utterances": [
-          "alexa, tell me more about the greek sphinx",
-          "alexa, tell me about the greek sphinx"
+          "alexa tell me more about the greek sphinx",
+          "alexa tell me about the greek sphinx",
+          "tell me about the greek sphinx",
+          "tell me more about the greek sphinx",
+          "tell me about the sphinx",
+          "tell me more about the sphinx"
         ]
       },
       {
@@ -453,7 +457,7 @@
       {
         "sceneId": 14,
         "utterances": [
-          "alexa, what is geometry",
+          "alexa what is geometry",
           "tell me more about geometry",
           "tell me about geometry",
           "what is geometry"

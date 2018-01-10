@@ -49,18 +49,22 @@ LookAroundIntent what is around
 GetACardIntent get a card
 GetACardIntent obtain a card
 GetACardIntent purchase a card
-Alexa,TellMeMoreAboutTheGreekSphinxIntent alexa, tell me more about the greek sphinx
-Alexa,TellMeMoreAboutTheGreekSphinxIntent alexa, tell me about the greek sphinx
+AlexaTellMeMoreAboutTheGreekSphinxIntent alexa tell me more about the greek sphinx
+AlexaTellMeMoreAboutTheGreekSphinxIntent alexa tell me about the greek sphinx
+AlexaTellMeMoreAboutTheGreekSphinxIntent tell me about the greek sphinx
+AlexaTellMeMoreAboutTheGreekSphinxIntent tell me more about the greek sphinx
+AlexaTellMeMoreAboutTheGreekSphinxIntent tell me about the sphinx
+AlexaTellMeMoreAboutTheGreekSphinxIntent tell me more about the sphinx
 ContinueIntent continue
 ContinueIntent keep going
 ContinueIntent move on
 ContinueIntent get ready
 ContinueIntent go
 ReturnIntent return
-Alexa,WhatIsGeometryIntent alexa, what is geometry
-Alexa,WhatIsGeometryIntent tell me more about geometry
-Alexa,WhatIsGeometryIntent tell me about geometry
-Alexa,WhatIsGeometryIntent what is geometry
+AlexaWhatIsGeometryIntent alexa what is geometry
+AlexaWhatIsGeometryIntent tell me more about geometry
+AlexaWhatIsGeometryIntent tell me about geometry
+AlexaWhatIsGeometryIntent what is geometry
 EnterTheLairIntent enter the lair
 EnterTheLairIntent enter lair
 EnterTheLairIntent move into the lair
