@@ -18,6 +18,7 @@ TheBackIntent finish the back
 TheBackIntent finish the back of the time machine
 DoNotDoItIntent do not do it
 DoNotDoItIntent do not turn on the time machine
+ChangeLaterIntent change later
 YesIntent yes
 YesIntent sure
 YesIntent okay
@@ -27,10 +28,27 @@ NoIntent nah
 NoIntent no thanks
 SmashItIntent smash it
 YesIntent yes
+NoIntent no
 YesIntent yes
 NoIntent no
-PayWithLedgerIntent pay with ledger
-PayWithLedgerIntent pay
+PayWithBitCoinIntent pay with bit coin
+PayWithBitCoinIntent pay with bitcoin
+PayWithBitCoinIntent pay with bitcoin
+PayWithBitCoinIntent pay using bit coin
+PayWithBitCoinIntent pay using bitcoin
+PayWithBitCoinIntent pay using bitcoin
+PayWithU.s.DollarIntent pay with u.s. dollar
+PayWithU.s.DollarIntent pay with us dollar
+PayWithU.s.DollarIntent pay with legacy
+PayWithU.s.DollarIntent pay legacy
+PayWithU.s.DollarIntent pay with usd
+PayWithU.s.DollarIntent pay with dollars
+LookAroundIntent look around
+LookAroundIntent look
+LookAroundIntent what is around
+GetACardIntent get a card
+GetACardIntent obtain a card
+GetACardIntent purchase a card
 Alexa,TellMeMoreAboutTheGreekSphinxIntent alexa, tell me more about the greek sphinx
 Alexa,TellMeMoreAboutTheGreekSphinxIntent alexa, tell me about the greek sphinx
 ContinueIntent continue
@@ -38,6 +56,7 @@ ContinueIntent keep going
 ContinueIntent move on
 ContinueIntent get ready
 ContinueIntent go
+ReturnIntent return
 Alexa,WhatIsGeometryIntent alexa, what is geometry
 Alexa,WhatIsGeometryIntent tell me more about geometry
 Alexa,WhatIsGeometryIntent tell me about geometry
@@ -50,3 +69,98 @@ GoHomeIntent go home
 GoHomeIntent no go home
 GoHomeIntent please go home
 GoHomeIntent i want to go home
+ReturnIntent return
+ContinueIntent continue
+NoIntent no
+YesIntent yes
+GoNorthIntent go north
+GoSouthIntent go south
+GoWestIntent go west
+GoWestIntent go west
+ContinueIntent continue
+YesIntent yes
+YesIntent ye
+NoIntent no
+NoIntent naw
+NoIntent ney
+GoOutsideIntent go outside
+StayInsideIntent stay inside
+StayInsideIntent inside
+StayInsideIntent stay
+GetOutIntent get out
+HideIntent hide
+HoldHandsUpIntent hold hands up
+HoldHandsUpIntent up
+HoldHandsUpIntent hands up
+FixTheTimeMachineIntent fix the time machine
+RespondIntent respond
+StaySilentIntent stay silent
+EatWithEmperorIntent eat with emperor
+EatWithEmperorIntent eat
+ExploreMoreIntent explore more
+YesIntent yes
+NoIntent no
+SettleDownIntent settle down
+SettleDownIntent settle
+SettleDownIntent stay
+ExploreIntent explore
+FindAWayHomeIntent find a way home
+DeclineIntent decline
+AcceptIntent accept
+AcceptTheGiftIntent accept the gift
+SettleDownIntent settle down
+FixTheTimeMachineIntent fix the time machine
+YesIntent yes
+NoIntent no
+AcceptIntent accept
+DeclineIntent decline
+DeclineIntent decline
+AcceptIntent accept
+DeclineIntent decline
+YouAcceptIntent you accept
+GoToFestivalIntent go to festival
+SettleDownIntent settle down
+DeclineIntent decline
+DeclineIntent decline
+AcceptIntent accept
+AcceptIntent accept
+DeclineIntent decline
+AcceptIntent accept
+DeclineIntent decline
+LeaveIntent leave
+LeaveIntent exit
+LeaveIntent go
+LeaveIntent abscond
+OneIntent one
+OneIntent four
+OneIntent seven
+OneIntent eight
+OneIntent nine
+OneIntent ten
+OneIntent one
+OneIntent four
+OneIntent seven
+OneIntent eight
+OneIntent nine
+OneIntent ten
+TwoIntent two
+TwoIntent three
+TwoIntent five
+TwoIntent six
+TwoIntent two
+TwoIntent three
+TwoIntent five
+TwoIntent six
+GoToSpaceIntent go to space
+GoToSpaceIntent go to the moon
+GoToSpaceIntent take a rocket
+GoToSpaceIntent fly to the moon
+GoToSpaceIntent visit the moon
+GoHomeIntent go home
+GoHomeIntent go home
+GoSouthIntent go south
+OpenDoorIntent open door
+ContinueIntent continue
+YesIntent yes
+NoIntent no
+ContinueIntent continue

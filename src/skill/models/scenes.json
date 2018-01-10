@@ -36,7 +36,7 @@
     "isHidden": false,
     "readPreviousOptions": false,
     "card": {
-      "title": "> Finish the time machine.",
+      "title": "You finish the time machine.",
       "text": "",
       "prompt": "",
       "image": {
@@ -77,6 +77,12 @@
           "do not do it",
           "do not turn on the time machine"
         ]
+      },
+      {
+        "sceneId": 26,
+        "utterances": [
+          "change later"
+        ]
       }
     ]
   },
@@ -86,7 +92,7 @@
     "isHidden": false,
     "readPreviousOptions": false,
     "card": {
-      "title": "> Enter: the Greek Empire.",
+      "title": "You enter the Greek Empire.",
       "text": "You fall out of the machine and are greeted by a blinding light. The light of a torch, but not like you imagined. It was fire, and the face of an old man. He smiled, “(in greek) Hello young one.”",
       "prompt": "",
       "image": {
@@ -152,23 +158,29 @@
     "generateOptions": true,
     "readPreviousOptions": false,
     "card": {
-      "title": "> Man: reveal speech.",
+      "title": "You activate your translator.",
       "text": "You activate your translator, which has only a little charge left, and you start to understand the man’s speech.\n\nHe says, in an old gravelly tone, “Are you here to save us from the monster?\"",
-      "prompt": "Yes, no... answer quickly!",
+      "prompt": "Yes, no...? answer quickly!",
       "image": {
         "largeImageUrl": null,
         "smallImageUrl": null
       }
     },
     "voice": {
-      "intro": "You activate your translator, which has only a little charge left, and you start to understand the man’s speech. He says, in an old gravelly tone,",
-      "prompt": ""
+      "intro": "You activate your translator, which has only a little charge left, and you start to understand the man’s speech.",
+      "prompt": "Yes, no...? Answer quickly!"
     },
     "options": [
       {
         "sceneId": 11,
         "utterances": [
           "yes"
+        ]
+      },
+      {
+        "sceneId": 20,
+        "utterances": [
+          "no"
         ]
       }
     ]
@@ -179,7 +191,7 @@
     "isHidden": false,
     "readPreviousOptions": false,
     "card": {
-      "title": "> Enter: the Future, c. 2055 CE.",
+      "title": "You enter the Future, at 2055 CE.",
       "text": "",
       "prompt": "",
       "image": {
@@ -213,8 +225,8 @@
     "generateOptions": true,
     "readPreviousOptions": false,
     "card": {
-      "title": "> Get in the bus",
-      "text": "You get in. Taking your seat, a display flashes to life in front of you, requesting for a payment of… 2.0 * 10^-6 Ethereum? In a pictograph on the side, it suggests placing a U.S. Ledger Pico X card in the card slot. There’s also an option to Pay with Legacy US Dollar.",
+      "title": "You get in the bus.",
+      "text": "Taking your seat, a display flashes to life in front of you, requesting for a payment of… 0.005 Bitcoin? In a pictograph on the side, it suggests placing a bitcoin payment card in the card slot. There’s also an option to Pay with Legacy US Dollar.",
       "prompt": "You're really confused right now.",
       "image": {
         "largeImageUrl": null,
@@ -229,8 +241,23 @@
       {
         "sceneId": 9,
         "utterances": [
-          "pay with ledger",
-          "pay"
+          "pay with bit coin",
+          "pay with bitcoin",
+          "pay with bitcoin",
+          "pay using bit coin",
+          "pay using bitcoin",
+          "pay using bitcoin"
+        ]
+      },
+      {
+        "sceneId": 66,
+        "utterances": [
+          "pay with u.s. dollar",
+          "pay with us dollar",
+          "pay with legacy",
+          "pay legacy",
+          "pay with usd",
+          "pay with dollars"
         ]
       }
     ]
@@ -258,23 +285,41 @@
   },
   {
     "id": 8,
-    "color": "default",
+    "color": "green",
     "isHidden": false,
     "generateOptions": true,
     "readPreviousOptions": false,
     "card": {
-      "title": "Room",
-      "text": "You enter a room.",
+      "title": "Someone comes up to you.",
+      "text": "Someone comes up to you, noticing your puzzled expression.\n“Hey! Just flew in? You from the Rurals, or what?” Your look of mute confusion seems to suffice for an answer. “Yeah, so while you might still use the US dollar over in your rural parts of the country, around here the city’s switched all the way to cryptocurrency. Just a swipe of your card, and you can get anything in the city!” He demonstrates, inserting his payment card, pressing a button to accept a payment of 0.005 Bitcoin, and after a few seconds it is accepted. “Oh wait, you don’t have a card do you? No problem! Let’s just go to the visitor center and get you one.”",
+      "prompt": "",
       "image": {
-        "smallImageUrl": null,
-        "largeImageUrl": null
+        "largeImageUrl": null,
+        "smallImageUrl": null
       }
     },
     "voice": {
-      "intro": "You enter a room. What would you like to do?",
-      "prompt": ""
+      "intro": "Someone comes up to you, noticing your puzzled expression.\n“Hey! Just flew in? You from the Rurals, or what?” Your look of mute confusion seems to suffice for an answer. “Yeah, so while you might still use the US dollar over in your rural parts of the country, around here the city’s switched all the way to cryptocurrency. Just a swipe of your card, and you can get anything in the city!” He demonstrates, inserting his payment card, pressing a button to accept a payment of 0.005 Bitcoin, and after a few seconds it is accepted. “Oh wait, you don’t have a card do you? No problem! Let’s just go to the visitor center and get you one.”",
+      "prompt": "You enter the visitor center."
     },
-    "options": []
+    "options": [
+      {
+        "sceneId": 67,
+        "utterances": [
+          "look around",
+          "look",
+          "what is around"
+        ]
+      },
+      {
+        "sceneId": 68,
+        "utterances": [
+          "get a card",
+          "obtain a card",
+          "purchase a card"
+        ]
+      }
+    ]
   },
   {
     "id": 9,
@@ -283,9 +328,9 @@
     "generateOptions": true,
     "readPreviousOptions": false,
     "card": {
-      "title": "Room",
-      "text": "You put in a brand-new, 2018 $20 bill. The display accepts it, though not without a little grumbling, and returns to you a voucher for 1.2 * 10^-6 ETH as change. Redeemable on any currency exchange website, it says.\n\nAt this point you’re really confused and it’s probably a good thing that someone sits down next to you right now, noticing your puzzled expression.",
-      "prompt": "",
+      "title": "You don't have any.",
+      "text": "Uh, you don’t have any? Nor do you have this weird “hardware wallet” device, as it suggests. It’s probably good that someone sits down next to you, noticing your puzzled expression.",
+      "prompt": "Do you talk to them?",
       "image": {
         "largeImageUrl": null,
         "smallImageUrl": null
@@ -304,7 +349,7 @@
     "generateOptions": true,
     "readPreviousOptions": false,
     "card": {
-      "title": "> Man: reveal speech.",
+      "title": "You smash the translator.",
       "text": "“HULKKKK SMAASH”. For some reason, after breaking the item, you end up being able to understand everything?",
       "prompt": "",
       "image": {
@@ -325,7 +370,7 @@
     "generateOptions": true,
     "readPreviousOptions": false,
     "card": {
-      "title": "> Man: give quest.",
+      "title": "The man tells you about the Greek Sphinx.",
       "text": "“Thank you, good traveler.” Now enter the Sphinx’s lair! But, be warned. This is a Greek Monster… it challenged even Oedipus, one of the smartest to ever exist, in its riddles. If you would like to learn more, say, “Alexa, tell me about the Greek Sphinx”.",
       "prompt": "",
       "image": {
@@ -366,7 +411,7 @@
     "card": {
       "title": "The Greek Sphinx",
       "text": "According to Wikipedia:\n\nA sphinx (Ancient Greek: Σφίγξ [spʰíŋks], Boeotian: Φίξ [pʰíːks], plural sphinxes or sphinges) is a mythical creature with the head of a human and the body of a lion.\n\nIn Greek tradition, it has the head of a human, the haunches of a lion, and sometimes the wings of a bird. It is mythicised as treacherous and merciless. Those who cannot answer its riddle suffer a fate typical in such mythological stories, as they are killed and eaten by this ravenous monster.",
-      "prompt": "",
+      "prompt": "Press any key, uh I meant say return to return.",
       "image": {
         "largeImageUrl": null,
         "smallImageUrl": null
@@ -376,7 +421,14 @@
       "intro": "A sphinx is a mythical creature with the head of a human and the body of a lion.\n\nIn Greek tradition, it has the head of a human, the haunches of a lion, and sometimes the wings of a bird. It is mythicised as treacherous and merciless. Those who cannot answer its riddle suffer a fate typical in such mythological stories, as they are killed and eaten by this ravenous monster.",
       "prompt": "Say return to go back."
     },
-    "options": []
+    "options": [
+      {
+        "sceneId": 17,
+        "utterances": [
+          "return"
+        ]
+      }
+    ]
   },
   {
     "id": 13,
@@ -385,7 +437,7 @@
     "generateOptions": true,
     "readPreviousOptions": false,
     "card": {
-      "title": "> Man: prepare the young one.",
+      "title": "The man prepares you to battle.",
       "text": "The man arms you with all the necessary components to get through the lair. The Greeks are evidently very good at geometry, or the study of shapes, and were able to provide you with a well-working chariot.",
       "prompt": "If you would like to be able to do the same, ask Alexa about geometry. Otherwise, enter the lair.",
       "image": {
@@ -434,8 +486,8 @@
     "generateOptions": true,
     "readPreviousOptions": false,
     "card": {
-      "title": "Room",
-      "text": "You enter a room.",
+      "title": "Geometry",
+      "text": "According to Wikipedia, Geometry  is a branch of mathematics concerned with questions of shape, size, relative position of figures, and the properties of space. A mathematician who works in the field of geometry is called a geometer.",
       "prompt": "",
       "image": {
         "largeImageUrl": null,
@@ -443,10 +495,17 @@
       }
     },
     "voice": {
-      "intro": "You enter a room. What would you like to do?",
+      "intro": "According to Wikipedia, Geometry  is a branch of mathematics concerned with questions of shape, size, relative position of figures, and the properties of space. A mathematician who works in the field of geometry is called a geometer.",
       "prompt": ""
     },
-    "options": []
+    "options": [
+      {
+        "sceneId": 18,
+        "utterances": [
+          "return"
+        ]
+      }
+    ]
   },
   {
     "id": 15,
@@ -455,8 +514,1392 @@
     "generateOptions": true,
     "readPreviousOptions": false,
     "card": {
+      "title": "Sphinx",
+      "text": "You go into the Sphinx's lair, who offers you 2 questions. If you get them write, you get fuel for your time machine. If you are wrong, then the monster would invade! Say continue, to begin.",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You go into the Sphinx's lair, who offers you 2 questions. If you get them write, you get fuel for your time machine. If you are wrong, then the monster would invade!",
+      "prompt": ""
+    },
+    "options": [
+      {
+        "sceneId": 19,
+        "utterances": [
+          "continue"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "color": "red",
+    "isHidden": true,
+    "generateOptions": true,
+    "readPreviousOptions": false,
+    "card": {
+      "title": "You attempt to escape.",
+      "text": "You try to escape, but the man blocks you. He sighs sadly as the monster engulfs the town.",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You try to escape, but the man blocks you. He sighs sadly as the monster engulfs the town.\n\nGame over.",
+      "prompt": ""
+    },
+    "options": []
+  },
+  {
+    "id": 17,
+    "color": "default",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": false,
+    "card": {
       "title": "Room",
       "text": "You enter a room.",
+      "image": {
+        "smallImageUrl": null,
+        "largeImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You enter a room. What would you like to do?",
+      "prompt": ""
+    },
+    "options": []
+  },
+  {
+    "id": 18,
+    "color": "default",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": false,
+    "card": {
+      "title": "Room",
+      "text": "You enter a room.",
+      "image": {
+        "smallImageUrl": null,
+        "largeImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You enter a room. What would you like to do?",
+      "prompt": ""
+    },
+    "options": []
+  },
+  {
+    "id": 19,
+    "color": "default",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": false,
+    "card": {
+      "title": "Question one!",
+      "text": "Is the study of Geometry about shapes?",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You enter a room. What would you like to do?",
+      "prompt": ""
+    },
+    "options": [
+      {
+        "sceneId": 77,
+        "utterances": [
+          "no"
+        ]
+      },
+      {
+        "sceneId": 78,
+        "utterances": [
+          "yes"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "color": "green",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": false,
+    "card": {
+      "title": "You run into the forest.",
+      "text": "You run away into a maze like forest. It is pitch black and you are having trouble seeing things.",
+      "prompt": "You can go north, south, or west.",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You enter a room. What would you like to do?",
+      "prompt": ""
+    },
+    "options": [
+      {
+        "sceneId": 21,
+        "utterances": [
+          "go north"
+        ]
+      },
+      {
+        "sceneId": 22,
+        "utterances": [
+          "go south"
+        ]
+      },
+      {
+        "sceneId": 23,
+        "utterances": [
+          "go west"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "color": "green",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": false,
+    "card": {
+      "title": "Good",
+      "text": "You enter a room.",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You go North, but find nothing, so you go back and go East.",
+      "prompt": ""
+    },
+    "options": [
+      {
+        "sceneId": 75,
+        "utterances": [
+          "go west"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "color": "default",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": false,
+    "card": {
+      "title": "Go South",
+      "text": "There appears to be a dead end. Suddenly, the door behind you shuts, an intricate trap used quite frequently by Greek Hunters. There is no use.\n\nGame Over",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "There appears to be a dead end. Suddenly, the door behind you shuts, an intricate trap used quite frequently by Greek Hunters.\n\nGame Over",
+      "prompt": ""
+    },
+    "options": []
+  },
+  {
+    "id": 23,
+    "color": "default",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": false,
+    "card": {
+      "title": "Death",
+      "text": "You reach a clearing with a dead end. There appears to be a bear there.",
+      "prompt": "It seems there's nowhere to go from here except back.",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "There is a bear. It seems aggressive. You feel like you shouldn’t spend that much time on internal monologues right now. Unfortunately, the bear doesn't have time for that either. Game over.",
+      "prompt": ""
+    },
+    "options": []
+  },
+  {
+    "id": 24,
+    "color": "default",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": false,
+    "card": {
+      "title": "More info to Chinese Empire",
+      "text": "You notice that on the back of the time machine, where the control circuit used to be, there is now an intricate bronze, clockwork design. “It’s for temporal navigation,” Hephaestus says. “It only required a slight modification to the Antikythera mechanism we already had.” You go back to time machine and… go to Chinese Empire!",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You notice that on the back of the time machine, where the control circuit used to be, there is now an intricate bronze, clockwork design. “It’s for temporal navigation,” Hephaestus says. “It only required a slight modification to the Antikythera mechanism we already had.” You go back to time machine and… go to Chinese Empire!",
+      "prompt": ""
+    },
+    "options": []
+  },
+  {
+    "id": 25,
+    "color": "default",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": false,
+    "card": {
+      "title": "North",
+      "text": "You go North and find someone in the clearing. “I am astonished that you were able to get through that maze… you must be tired. Don’t worry, your journey back to your time is guaranteed by me. I am a Greek god and will provide you materials to get back to your own time! Unfortunately, I don’t have much time, but if you would like to learn more about me or Greek Mythology, say “Alexa, tell me about the Greek god of Fire”. Else, continue.",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "“I am astonished that you were able to get through that maze… you must be tired. Don’t worry, your journey back to your time is guaranteed by me. I am a Greek god and will provide you materials to get back to your own time! Unfortunately, I don’t have much time, but if you would like to learn more about me or Greek Mythology, say “Alexa, tell me about the Greek god of Fire”. Else, continue.",
+      "prompt": ""
+    },
+    "options": [
+      {
+        "sceneId": 24,
+        "utterances": [
+          "continue"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "color": "green",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": false,
+    "card": {
+      "title": "You enter the Chinese Empire, at 700 AD.",
+      "text": "The sound of the machines hisses, flinging smoke throughout the crevices of the doorway in front of you. Light blinds your eyes, as the door creaks open. As your eyes begin to recover, the aroma of what feels like cherry blossoms. You see a wide open field, filled with lush green grass waving in the breeze, and the cherry blossoms shedding their beauty. Or at least you thought they were cherry blossoms. Your time machine is analyzing them as “Yulan Magnolia”. You have no clue where you are. Do you want to look at your GPS? Yes or No?",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "The sound of the machines hisses, flinging smoke throughout the crevices of the doorway in front of you. Light blinds your eyes, as the door creaks open. As your eyes begin to recover, the aroma of what feels like cherry blossoms. You see a wide open field, filled with lush green grass waving in the breeze, and the cherry blossoms shedding their beauty. Or at least you thought they were cherry blossoms. Your time machine is analyzing them as “Yulan Magnolia”. You have no clue where you are. Do you want to look at your GPS? Yes or No?",
+      "prompt": ""
+    },
+    "options": [
+      {
+        "sceneId": 27,
+        "utterances": [
+          "yes",
+          "ye"
+        ]
+      },
+      {
+        "sceneId": 28,
+        "utterances": [
+          "no",
+          "naw",
+          "ney"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "color": "default",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": true,
+    "card": {
+      "title": "Check GPS",
+      "text": "You decide to check your GPS inside your time machine. Your machine hymns as it attempts to find your location .Unsurprisingly, it couldn't find you. Maybe because satellites hadn’t been invented yet. You hear a scream “Over there! (in chinese)”. You are unaware of their current intentions, and decide to turn on your translator. Do you want to stay inside the machine, or get out?",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You decide to check your GPS inside your time machine. Your machine hymns as it attempts to find your location .Unsurprisingly, it couldn't find you. Maybe because satellites hadn’t been invented yet. You hear a scream “Over there! (in chinese)”. You are unaware of their current intentions, and decide to turn on your translator. Do you want to stay inside the machine, or get out? (Go to II)",
+      "prompt": ""
+    },
+    "options": [
+      {
+        "sceneId": 29,
+        "utterances": [
+          "go outside"
+        ]
+      },
+      {
+        "sceneId": 30,
+        "utterances": [
+          "stay inside",
+          "inside",
+          "stay"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "color": "default",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": true,
+    "card": {
+      "title": "Do not check GPS",
+      "text": "Seemed pointless anyways considering the fact that satellites may not even exist yet. You suddenly head multiple footsteps behind you. You hear some sounds behind you. gasping, most likely in shock. Makes sense considering you’re in a magical tube of steel. Considering that this is most likely not your home country, you turn on your translator. Do you get out or hide?",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You enter a room. What would you like to do?",
+      "prompt": ""
+    },
+    "options": [
+      {
+        "sceneId": 53,
+        "utterances": [
+          "get out"
+        ]
+      },
+      {
+        "sceneId": 54,
+        "utterances": [
+          "hide"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "color": "default",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": true,
+    "card": {
+      "title": "Leave inside time machine",
+      "text": "You left the machine, and realized the footsteps belonged to soldiers. You quickly grab the brain of the time machine, and strap it to your arm. The translator pings you and reveals the owner of the voice heard before. It belonged to General Xue Rengui of China’s Tang Dynasty. It all gets put together in your head as you realize you’re in China. Soldiers are still coming towards you. Will you get up and put your hands up or activate the time machine and see if you can get out somehow?",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You left the machine, and realized the footsteps belonged to soldiers. You quickly grab the brain of the time machine, and strap it to your arm. The translator pings you and reveals the owner of the voice heard before. It belonged to General Xue Rengui of China’s Tang Dynasty. It all gets put together in your head as you realize you’re in China. Soldiers are still coming towards you. Will you get up and put your hands up or activate the time machine and see if you can get out somehow?",
+      "prompt": ""
+    },
+    "options": [
+      {
+        "sceneId": 31,
+        "utterances": [
+          "hold hands up",
+          "up",
+          "hands up"
+        ]
+      },
+      {
+        "sceneId": 32,
+        "utterances": [
+          "fix the time machine"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "color": "red",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": true,
+    "card": {
+      "title": "You come out: Game Over!",
+      "text": "You decide to stay in the machine. Sadly there is no door therefore you are quickly captures and are now unable to fix the time machine. Game Over!",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You decide to stay in the machine. Sadly there is no door therefore you are quickly captures and are now unable to fix the time machine. Game Over!",
+      "prompt": ""
+    },
+    "options": []
+  },
+  {
+    "id": 31,
+    "color": "default",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": true,
+    "card": {
+      "title": "You hold your hands up",
+      "text": "You hold your hands up as the soldiers surround you. Xue Rengui walks and asks “Nǐ shì shuí? Nǐ zài zhèlǐ de mùdì shì shénme\". Will you respond using your translator and explaining that you are from another time, or will you stay silent?",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You hold your hands up as the soldiers surround you. Xue Rengui walks and asks “Who are you, and what is your purpose for being present here (in Chinese). Will you respond using your translator and explaining that you are from another time, or will you stay silent?",
+      "prompt": ""
+    },
+    "options": [
+      {
+        "sceneId": 33,
+        "utterances": [
+          "respond"
+        ]
+      },
+      {
+        "sceneId": 34,
+        "utterances": [
+          "stay silent"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "color": "red",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": true,
+    "card": {
+      "title": "Game Over: You lose!",
+      "text": "You are unable to fix the machine without gunpowder therefore you are capture by the Chinese army.",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You are unable to fix the machine without gunpowder therefore you are capture by the Chinese army.",
+      "prompt": ""
+    },
+    "options": []
+  },
+  {
+    "id": 33,
+    "color": "default",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": true,
+    "card": {
+      "title": "You respond",
+      "text": "Xen Rengui is surprised, yet he takes you as a guest. He takes you to meet the almighty emperor Taizong of the Tang Dynasty. He seems to believe you are a special traveler meant to evaluate the dynasty. He explains to you that the dynasty is at the highest point in Chinese history, with the most immense power. He invites you to eat dinner with him. Will you accept, or explore more?",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "Xen Rengui is surprised, yet he takes you as a guest. He takes you to meet the almighty emperor Taizong of the Tang Dynasty. He seems to believe you are a special traveler meant to evaluate the dynasty. He explains to you that the dynasty is at the highest point in Chinese history, with the most immense power. He gives you a gift of gunpowder to show his respect. Do you take the gunpowder and leave or stay?",
+      "prompt": ""
+    },
+    "options": [
+      {
+        "sceneId": 35,
+        "utterances": [
+          "eat with emperor",
+          "eat"
+        ]
+      },
+      {
+        "sceneId": 36,
+        "utterances": [
+          "explore more"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "color": "red",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": true,
+    "card": {
+      "title": "Game Over: You lose!",
+      "text": "You have been captured by the Chinese army and are now unable to fix your time machine",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You have been captured by the Chinese army and are now unable to fix your time machine",
+      "prompt": ""
+    },
+    "options": []
+  },
+  {
+    "id": 35,
+    "color": "default",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": true,
+    "card": {
+      "title": "You dine with the emperor",
+      "text": "You accept his request to dinner. You feast on hundred's of exquisite dishes, including exotics stews filled with goose, lamb, porn, rice, salt, ginger, vinegar and other hard to find ingredients. He tells you about the thriving country, entering into a Golden Age. He tells you about the thriving trade, and agriculture. Once you finish, and enjoy yourself to some fine desert, he invites you to go to the Chinese Spring Lantern Festival. Will you accept?",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You accept his request to dinner. You feat on hundred's of exquisite dishes, including exotics stews filled with goose, lamb, porn, rice, salt, ginger, vinegar and other hard to find ingredients. He tells you about the thriving country, entering into a Golden Age. He tells you about the thriving trade, and agriculture. Once you finish, and enjoy yourself to some fine desert, he invites you to go to the Chinese Spring Lantern Festival. Will you accept? Yes or No",
+      "prompt": ""
+    },
+    "options": [
+      {
+        "sceneId": 40,
+        "utterances": [
+          "yes"
+        ]
+      },
+      {
+        "sceneId": 41,
+        "utterances": [
+          "no"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "color": "default",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": true,
+    "card": {
+      "title": "You explore the empire",
+      "text": "You decide to explore more of the Chinese empire. You hear from bystanders that the Spring Lantern Festival is occurring. Will you chose to go watch, settle down, or attempt to find someone of authority to find a way home?",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You decide to explore more of the Chinese empire. You hear from bystanders that the Spring Lantern Festival is occurring. Will you chose to go watch, settle down, or attempt to find someone of authority to find a way home?",
+      "prompt": ""
+    },
+    "options": [
+      {
+        "sceneId": 37,
+        "utterances": [
+          "settle down",
+          "settle",
+          "stay"
+        ]
+      },
+      {
+        "sceneId": 38,
+        "utterances": [
+          "explore"
+        ]
+      },
+      {
+        "sceneId": 39,
+        "utterances": [
+          "find a way home"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "color": "red",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": true,
+    "card": {
+      "title": "Settle Down: Game Over!",
+      "text": "In the end, you find that the cherry blossoms and wide open fields have intoxicated you beyond reason, falling in love with the land. You decide to stay and enjoy the rest of your time in China. Game over!",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "In the end, you find that the cherry blossoms and wide open fields have intoxicated you beyond reason, falling in love with the land. You decide to stay and enjoy the rest of your time in China. Game over!",
+      "prompt": ""
+    },
+    "options": []
+  },
+  {
+    "id": 38,
+    "color": "default",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": true,
+    "card": {
+      "title": "Explore the festival",
+      "text": "You decide to start walking towards the commotion. You can hear the music and the dancing, and suddenly the sky erupts in bright orange. Lanterns suddenly fill the sky. What a beautiful sight as you say to yourself. Xue Rengui, a chinese general notices you and walks over to you wondering who you are. You respond explaining that you are from another time. He amazed, takes you to meet the emperor Taizong. Do you accept, or decline?",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You decide to start walking towards the commotion. You can hear the music and the dancing, and suddenly the sky erupts in bright orange. Lanterns suddenly fill the sky. What a beautiful sight as you say to yourself. Xue Rengui, a chinese general notices you and walks over to you wondering who you are. You respond explaining that you are from another time. He amazed, takes you to meet the emperor Taizong. Do you accept, or decline?",
+      "prompt": ""
+    },
+    "options": [
+      {
+        "sceneId": 47,
+        "utterances": [
+          "decline"
+        ]
+      },
+      {
+        "sceneId": 48,
+        "utterances": [
+          "accept"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "color": "red",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": true,
+    "card": {
+      "title": "Find a way home: Game over!",
+      "text": "You decide to try and fix the time machine. You are unable to due to missing gunpowder. Game Over!",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You decide to try and fix the time machine. You are unable to due to missing gunpowder. Game Over!",
+      "prompt": ""
+    },
+    "options": []
+  },
+  {
+    "id": 40,
+    "color": "default",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": true,
+    "card": {
+      "title": "You say yes",
+      "text": "The emperor guides you out of his palace as you two ride towards the festival. You can hear the music and the dancing, and suddenly the sky erupts in bright orange. Lanterns suddenly fill the sky. What a beautiful sight as you say to yourself. The emperor appreciates your love for China, and offers you a gift. Do you settle down, accept his gift, or go back to fixing the time machine?",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "The emperor guides you out of his palace as you two ride towards the festival. You can hear the music and the dancing, and suddenly the sky erupts in bright orange. Lanterns suddenly fill the sky. What a beautiful sight as you say to yourself. The emperor appreciates your love for China, and offers you a gift. Do you settle down, accept his gift, or go back to fixing the time machine?",
+      "prompt": ""
+    },
+    "options": [
+      {
+        "sceneId": 44,
+        "utterances": [
+          "accept the gift"
+        ]
+      },
+      {
+        "sceneId": 45,
+        "utterances": [
+          "settle down"
+        ]
+      },
+      {
+        "sceneId": 46,
+        "utterances": [
+          "fix the time machine"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "color": "default",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": true,
+    "card": {
+      "title": "No",
+      "text": "You say no, and the emperor understands that you must go somewhere. He gives you a gift of appreciation. Do you accept? Yes or No?",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You say no, and the emperor understands that you must go somewhere. He gives you a gift of appreciation. Do you accept? Yes or No?",
+      "prompt": ""
+    },
+    "options": [
+      {
+        "sceneId": 42,
+        "utterances": [
+          "yes"
+        ]
+      },
+      {
+        "sceneId": 43,
+        "utterances": [
+          "no"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "color": "green",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": true,
+    "card": {
+      "title": "Yes: Travel to the future",
+      "text": "You accept the emperor's gift and you receive gunpowder. This is just what you needed! You go back to your time machine and travel to the future!",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You accept the emperor's gift and you receive gunpowder. This is just what you needed! You go back to your time machine and travel to the future!",
+      "prompt": ""
+    },
+    "options": []
+  },
+  {
+    "id": 43,
+    "color": "red",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": true,
+    "card": {
+      "title": "You deny the gift",
+      "text": "You deny the gift. He was going to give you some gunpowder, but he is now offended that you didn't accept the gift. What a shame, that was what you needed to fix your time machine. Game Over!",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You deny the gift. He was going to give you some gunpowder, but he is now offended that you didn't accept the gift. What a shame, that was what you needed to fix your time machine. Game Over!",
+      "prompt": ""
+    },
+    "options": []
+  },
+  {
+    "id": 44,
+    "color": "green",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": true,
+    "card": {
+      "title": "Accept the gift: Travel to the future",
+      "text": "You accept the emperor's gift and you receive gunpowder. This is just what you needed! You go back to your time machine and travel to the future!",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You accept the emperor's gift and you receive gunpowder. This is just what you needed! You go back to your time machine and travel to the future!",
+      "prompt": ""
+    },
+    "options": []
+  },
+  {
+    "id": 45,
+    "color": "red",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": true,
+    "card": {
+      "title": "Settle Down: Game Over!",
+      "text": "You enter a In the end, you find that the cherry blossoms and wide open fields have intoxicated you beyond reason, falling in love with the land. You decide to stay and enjoy the rest of your time in China. Game over!.",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You enter a In the end, you find that the cherry blossoms and wide open fields have intoxicated you beyond reason, falling in love with the land. You decide to stay and enjoy the rest of your time in China. Game over!.",
+      "prompt": ""
+    },
+    "options": []
+  },
+  {
+    "id": 46,
+    "color": "red",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": true,
+    "card": {
+      "title": "Fix the time machine",
+      "text": "You deny the gift and go back to fixing the time machine. He was going to give you some gunpowder, but he is now offended that you didn't accept the gift. What a shame, that was what you needed to fix your time machine. Game Over!",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You deny the gift and go back to fixing the time machine. He was going to give you some gunpowder, but he is now offended that you didn't accept the gift. What a shame, that was what you needed to fix your time machine. Game Over!",
+      "prompt": ""
+    },
+    "options": []
+  },
+  {
+    "id": 47,
+    "color": "red",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": true,
+    "card": {
+      "title": "Decline: Game Over!",
+      "text": "You kindly decline and go back, trying to fix the time machine. Sadly you are missing gunpowder. Game Over!",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You kindly decline and go back, trying to fix the time machine. Sadly you are missing gunpowder. Game Over!",
+      "prompt": ""
+    },
+    "options": []
+  },
+  {
+    "id": 48,
+    "color": "default",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": true,
+    "card": {
+      "title": "You accept",
+      "text": "He takes you to meet the almighty emperor Taizong of the Tang Dynasty. He seems to believe you are a special traveler meant to evaluate the dynasty. He explains to you that the dynasty is at the highest point in Chinese history, with the most immense power. He invites you to eat dinner with him. Will you accept, or decline",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "He takes you to meet the almighty emperor Taizong of the Tang Dynasty. He seems to believe you are a special traveler meant to evaluate the dynasty. He explains to you that the dynasty is at the highest point in Chinese history, with the most immense power. He invites you to eat dinner with him. Will you accept, or explore more?",
+      "prompt": ""
+    },
+    "options": [
+      {
+        "sceneId": 49,
+        "utterances": [
+          "accept"
+        ]
+      },
+      {
+        "sceneId": 50,
+        "utterances": [
+          "decline"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "color": "default",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": false,
+    "card": {
+      "title": "You accept",
+      "text": "You accept his request to dinner. You feat on hundred's of exquisite dishes, including exotics stews filled with goose, lamb, porn, rice, salt, ginger, vinegar and other hard to find ingredients. He tells you about the thriving country, entering into a Golden Age. He tells you about the thriving trade, and agriculture. Once you finish, and enjoy yourself to some fine desert, and he offers a gift. Do you accept or decline?",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You accept his request to dinner. You feat on hundred's of exquisite dishes, including exotics stews filled with goose, lamb, porn, rice, salt, ginger, vinegar and other hard to find ingredients. He tells you about the thriving country, entering into a Golden Age. He tells you about the thriving trade, and agriculture. Once you finish, and enjoy yourself to some fine desert, and he offers a gift. Do you accept or decline?",
+      "prompt": ""
+    },
+    "options": [
+      {
+        "sceneId": 51,
+        "utterances": [
+          "decline"
+        ]
+      },
+      {
+        "sceneId": 52,
+        "utterances": [
+          "accept"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "color": "red",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": true,
+    "card": {
+      "title": "Decline: Game Over!",
+      "text": "You kindly decline and go back, trying to fix the time machine. Sadly you are missing gunpowder. Game Over!",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You kindly decline and go back, trying to fix the time machine. Sadly you are missing gunpowder. Game Over!",
+      "prompt": ""
+    },
+    "options": []
+  },
+  {
+    "id": 51,
+    "color": "red",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": true,
+    "card": {
+      "title": "You decline: Game Over!",
+      "text": "You decline the gift, the emperor is offended. You go back to fixing your time machine, but you don't have gunpowder! What a shame, he was going to give you gunpowder as a gift. Game Over!",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You decline the gift, the emperor is offended. You go back to fixing your time machine, but you don't have gunpowder! What a shame, he was going to give you gunpowder as a gift. Game Over!",
+      "prompt": ""
+    },
+    "options": []
+  },
+  {
+    "id": 52,
+    "color": "green",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": true,
+    "card": {
+      "title": "Accept: Travel to the future",
+      "text": "You accept the emperor's gift and you receive gunpowder. This is just what you needed! You go back to your time machine and travel to the future!",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You accept the emperor's gift and you receive gunpowder. This is just what you needed! You go back to your time machine and travel to the future!",
+      "prompt": ""
+    },
+    "options": []
+  },
+  {
+    "id": 53,
+    "color": "default",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": true,
+    "card": {
+      "title": "You get out",
+      "text": "You decide to leave the time machine. As you walk outside, you realize the sounds belonged to handful of villagers. According to the time machine, they are talking Chinese, which must put you somewhere in ancient China. The people seem friendly after seeing that you are human, and they invite you to eat with them. Will you accept, or decline?",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You decide to leave the time machine. As you walk outside, you realize the sounds belonged to handful of villagers. According to the time machine, they are talking Chinese, which must put you somewhere in ancient China. The people seem friendly after seeing that you are human, and they invite you to eat with them. Will you accept, or decline?",
+      "prompt": ""
+    },
+    "options": [
+      {
+        "sceneId": 55,
+        "utterances": [
+          "decline"
+        ]
+      },
+      {
+        "sceneId": 56,
+        "utterances": [
+          "you accept"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "color": "red",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": true,
+    "card": {
+      "title": "You hide",
+      "text": "You decide to hide in the time machine, but since there isn't a door you are quickly captured and are now unable to fix your time machine",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You decide to hide in the time machine, but since there isn't a door you are quickly captured and are now unable to fix your time machine",
+      "prompt": ""
+    },
+    "options": []
+  },
+  {
+    "id": 55,
+    "color": "red",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": true,
+    "card": {
+      "title": "You Decline: Game Over!",
+      "text": "The villagers retreat and you are left alone with your time machine. You attempt to fix it, but you realize you need gunpowder. You are unable to fix your time machine. Game Over!",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "The villagers retreat and you are left alone with your time machine. You attempt to fix it, but you realize you need gunpowder. You are unable to fix your time machine. Game Over!",
+      "prompt": ""
+    },
+    "options": []
+  },
+  {
+    "id": 56,
+    "color": "default",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": true,
+    "card": {
+      "title": "You Accept",
+      "text": "You accept their offer and feast with them, making countless acquaintances. You feast on hundred's of exquisite dishes, including exotics stews filled with goose, lamb, porn, rice, salt, ginger, vinegar and other hard to find ingredients. Once you finish, and enjoy yourself to some fine desert, they invites you to go to the Chinese Spring Lantern Festival. Do you go with them, leave, or settle down",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You accept their offer and feast with them, making countless acquaintances. You feast on hundred's of exquisite dishes, including exotics stews filled with goose, lamb, porn, rice, salt, ginger, vinegar and other hard to find ingredients. Once you finish, and enjoy yourself to some fine desert, they invites you to go to the Chinese Spring Lantern Festival. Do you go with them, leave, or settle down",
+      "prompt": ""
+    },
+    "options": [
+      {
+        "sceneId": 57,
+        "utterances": [
+          "go to festival"
+        ]
+      },
+      {
+        "sceneId": 58,
+        "utterances": [
+          "settle down"
+        ]
+      },
+      {
+        "sceneId": 59,
+        "utterances": [
+          "decline"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "color": "default",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": true,
+    "card": {
+      "title": "Go to festival",
+      "text": "You decide to start walking towards the commotion. You can hear the music and the dancing, and suddenly the sky erupts in bright orange. Lanterns suddenly fill the sky. What a beautiful sight as you say to yourself. Xue Rengui, a chinese general notices you and walks over to you wondering who you are. You respond explaining that you are from another time. He amazed, takes you to meet the emperor. Do you accept, or decline?",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You decide to start walking towards the commotion. You can hear the music and the dancing, and suddenly the sky erupts in bright orange. Lanterns suddenly fill the sky. What a beautiful sight as you say to yourself. Xue Rengui, a chinese general notices you and walks over to you wondering who you are. You respond explaining that you are from another time. He amazed, takes you to meet the emperor. Do you accept, or decline?",
+      "prompt": ""
+    },
+    "options": [
+      {
+        "sceneId": 60,
+        "utterances": [
+          "decline"
+        ]
+      },
+      {
+        "sceneId": 61,
+        "utterances": [
+          "accept"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "color": "red",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": true,
+    "card": {
+      "title": "Settle Down: Game Over",
+      "text": "In the end, you find that the cherry blossoms and wide open fields have intoxicated you beyond reason, falling in love with the land. You decide to stay and enjoy the rest of your time in China. Game over!",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "In the end, you find that the cherry blossoms and wide open fields have intoxicated you beyond reason, falling in love with the land. You decide to stay and enjoy the rest of your time in China. Game over!",
+      "prompt": ""
+    },
+    "options": []
+  },
+  {
+    "id": 59,
+    "color": "red",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": true,
+    "card": {
+      "title": "Decline: Game Over!",
+      "text": "You decide to decline their offer and go back to trying to fix the time machine. You are unable to fix it. Seems like you need gunpowder. You are unable to fix the time machine. Game over!",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You decide to decline their offer and go back to trying to fix the time machine. You are unable to fix it. Seems like you need gunpowder. You are unable to fix the time machine. Game over!",
+      "prompt": ""
+    },
+    "options": []
+  },
+  {
+    "id": 60,
+    "color": "red",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": true,
+    "card": {
+      "title": "Decline: Game Over!",
+      "text": "You kindly decline and go back, trying to fix the time machine. Sadly you are missing gunpowder. Game Over!",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You kindly decline and go back, trying to fix the time machine. Sadly you are missing gunpowder. Game Over!",
+      "prompt": ""
+    },
+    "options": []
+  },
+  {
+    "id": 61,
+    "color": "default",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": true,
+    "card": {
+      "title": "You Accept",
+      "text": "He takes you to meet the almighty emperor Taizong of the Tang Dynasty. He seems to believe you are a special traveler meant to evaluate the dynasty. He explains to you that the dynasty is at the highest point in Chinese history, with the most immense power. He asks you to dinner, but you say you have already eaten dinner. He asks if you're interested in China. Will you reply yes or no?",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "He takes you to meet the almighty emperor Taizong of the Tang Dynasty. He seems to believe you are a special traveler meant to evaluate the dynasty. He explains to you that the dynasty is at the highest point in Chinese history, with the most immense power. He asks you to dinner, but you say you have already eaten dinner. He asks if you're interested in China. Will you reply yes or no?",
+      "prompt": ""
+    },
+    "options": [
+      {
+        "sceneId": 62,
+        "utterances": [
+          "accept"
+        ]
+      },
+      {
+        "sceneId": 63,
+        "utterances": [
+          "decline"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "color": "default",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": true,
+    "card": {
+      "title": "You accept",
+      "text": "You accept his request to dinner. He tells you about the thriving country, entering into a Golden Age. He tells you about the thriving trade, and agriculture. Once he is done talking, he offers you a token of appreciation. Do you accept or decline?",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You accept his request to dinner. He tells you about the thriving country, entering into a Golden Age. He tells you about the thriving trade, and agriculture. Once he is done talking, he offers you a token of appreciation. Do you accept or decline?",
+      "prompt": ""
+    },
+    "options": [
+      {
+        "sceneId": 64,
+        "utterances": [
+          "accept"
+        ]
+      },
+      {
+        "sceneId": 65,
+        "utterances": [
+          "decline"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "color": "red",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": true,
+    "card": {
+      "title": "Decline: Game Over!",
+      "text": "You kindly decline and go back, trying to fix the time machine. Sadly you are missing gunpowder. Game Over!",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You kindly decline and go back, trying to fix the time machine. Sadly you are missing gunpowder. Game Over!",
+      "prompt": ""
+    },
+    "options": []
+  },
+  {
+    "id": 64,
+    "color": "green",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": true,
+    "card": {
+      "title": "Accept: Travel to the future",
+      "text": "You accept the emperor's gift and you receive gunpowder. This is just what you needed! You go back to your time machine and travel to the future!",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You accept the emperor's gift and you receive gunpowder. This is just what you needed! You go back to your time machine and travel to the future!",
+      "prompt": ""
+    },
+    "options": []
+  },
+  {
+    "id": 65,
+    "color": "red",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": true,
+    "card": {
+      "title": "Decline: Game Over!",
+      "text": "You decline the gift, the emperor is offended. You go back to fixing your time machine, but you don't have gunpowder! What a shame, he was going to give you gunpowder as a gift. Game Over!",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You decline the gift, the emperor is offended. You go back to fixing your time machine, but you don't have gunpowder! What a shame, he was going to give you gunpowder as a gift. Game Over!",
+      "prompt": ""
+    },
+    "options": []
+  },
+  {
+    "id": 66,
+    "color": "default",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": false,
+    "card": {
+      "title": "You insert a $20 bill.",
+      "text": "Brand new, from 2018.",
       "prompt": "",
       "image": {
         "largeImageUrl": null,
@@ -470,14 +1913,322 @@
     "options": []
   },
   {
-    "id": 16,
+    "id": 67,
     "color": "default",
-    "isHidden": true,
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": false,
+    "card": {
+      "title": "The building is large and profound.",
+      "text": "The building is a soaring, glass-walled marvel, with aging banners proclaiming ZERO NET ENERGY — SOLVE CLIMATE CHANGE 2050 on them. “We should really take those down,” your new acquaintance says to you. “The whole country’s switched over to green energy for a while now. Well, except for Rhode Island. I really wish we didn’t need so many desalination plants, though,” he remarks, pointing out a row of towers on the horizon, “they’re such an eyesore. Necessary, considering our contamination of the water supply, but annoying.”",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "The building is a soaring, glass-walled marvel, with aging banners proclaiming ZERO NET ENERGY — SOLVE CLIMATE CHANGE 2050 on them. “We should really take those down,” your new acquaintance says to you. “The whole country’s switched over to green energy for a while now. Well, except for Rhode Island. I really wish we didn’t need so many desalination plants, though,” he remarks, pointing out a row of towers on the horizon, “they’re such an eyesore. Necessary, considering our contamination of the water supply, but annoying.”",
+      "prompt": "Say return to return."
+    },
+    "options": []
+  },
+  {
+    "id": 68,
+    "color": "green",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": false,
+    "card": {
+      "title": "You purchase a Bitcoin payment card.",
+      "text": "You find a Bitcoin payment card prominently advertised, with a price of 0.001 BTC or $1.99. You purchase it and deposit half your life savings, or around $70.",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You find a Bitcoin payment card prominently advertised, with a price of 0.001 BTC or $1.99. You purchase it and deposit half your life savings, or around $70.",
+      "prompt": "What do you do now? Seems like you're done here."
+    },
+    "options": [
+      {
+        "sceneId": 69,
+        "utterances": [
+          "leave",
+          "exit",
+          "go",
+          "abscond"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "color": "green",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": false,
+    "card": {
+      "title": "You desire to leave the future now. Maybe the lottery?",
+      "text": "Well, that’s probably enough of the future for you. Honestly it’s a little spooky. You say a quick thanks to your acquaintance and rush back outside.\n\nYou pass by signs advertising vacations on the Moon! The Final Frontier! Only 9.78 BTC each! Along with the hot new holo-iPhone of course.\n\nGetting back in your time machine, you realize that it's out of fuel. Must have been used up from all these time travels.\n\nAnd you probably don't have enough money for fuel. Especially not the Uranium 235 the machine requires.\n\nThe only thing you can think of is the lottery.\n\nLOTTERY TIME! Says a nearby stand. Pick a number from 1 to 10. Potentially win millions!",
+      "prompt": "Do you go there?",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "Well, that’s probably enough of the future for you. Honestly it’s a little spooky. You say a quick thanks to your acquaintance and rush back outside.\n\nYou pass by signs advertising vacations on the Moon! The Final Frontier! Only 9.78 BTC each! Along with the hot new holo-iPhone of course.\n\nGetting back in your time machine, you realize that it's out of fuel. Must have been used up from all these time travels.\n\nAnd you probably don't have enough money for fuel. Especially not the Uranium 235 the machine requires.\n\nThe only thing you can think of is the lottery.\n\nLOTTERY TIME! Says a nearby stand. Pick a number from 1 to 10. Potentially win millions!",
+      "prompt": "What number do you pick?"
+    },
+    "options": [
+      {
+        "sceneId": 70,
+        "utterances": [
+          "1",
+          "4",
+          "7",
+          "8",
+          "9",
+          "10",
+          "one",
+          "four",
+          "seven",
+          "eight",
+          "nine",
+          "ten"
+        ]
+      },
+      {
+        "sceneId": 71,
+        "utterances": [
+          "2",
+          "3",
+          "5",
+          "6",
+          "two",
+          "three",
+          "five",
+          "six"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 70,
+    "color": "green",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": false,
+    "card": {
+      "title": "You win!",
+      "text": "Amazingly, you somehow win this highly unlikely lottery. A transfer of 95 BTC to your payment card confirms your new riches. Awesome!",
+      "prompt": "What do you do now? Seems like there's a lot to explore.",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "Amazingly, you somehow win this highly unlikely lottery. A transfer of 95 BTC to your payment card confirms your new riches. Awesome!",
+      "prompt": "What do you do now? Seems like there's a lot to explore."
+    },
+    "options": [
+      {
+        "sceneId": 72,
+        "utterances": [
+          "go to space",
+          "go to the moon",
+          "take a rocket",
+          "fly to the moon",
+          "visit the moon"
+        ]
+      },
+      {
+        "sceneId": 73,
+        "utterances": [
+          "go home"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "color": "red",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": false,
+    "card": {
+      "title": "Game over!",
+      "text": "You lose the lottery. Resigning yourself to your fate, you live a nice, if somewhat impoverished, life in 2055. There are a few benefits, like electronic cash and free healthcare.",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "Game over!\n\nResigning yourself to your fate, you live a nice, if somewhat impoverished, life in 2055. There are a few benefits, like electronic cash and free healthcare.",
+      "prompt": ""
+    },
+    "options": []
+  },
+  {
+    "id": 72,
+    "color": "default",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": false,
+    "card": {
+      "title": "You decide to visit the moon.",
+      "text": "You book the next ticket to the moon.\n\nDays later...\n\nLooking down from the rocket onto the Earth, you are impressed as always by its beauty. The smog has been removed above China and America, replaced instead by wispy clouds. The world seems to be doing quite well!",
+      "prompt": "After making it back home, you wonder at what to do next. You are feeling a little homesick.",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You book the next ticket to the moon.\n\nDays later...\n\nLooking down from the rocket onto the Earth, you are impressed as always by its beauty. The smog has been removed above China and America, replaced instead by wispy clouds. The world seems to be doing quite well!",
+      "prompt": "After making it back home, you wonder at what to do next. You are feeling a little homesick."
+    },
+    "options": [
+      {
+        "sceneId": 74,
+        "utterances": [
+          "go home"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "color": "default",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": false,
+    "card": {
+      "title": "You buy some military-grade uranium.",
+      "text": "Surprisingly easy to find in this day and age -- the perfect fuel for your time machine.\n\nWith a happy sigh, you set it to the present time, and warp back.\n\n THE END",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "Surprisingly easy to find in this day and age -- the perfect fuel for your time machine.\n\nWith a happy sigh, you set it to the present time, and warp back.\n\n THE END",
+      "prompt": ""
+    },
+    "options": []
+  },
+  {
+    "id": 74,
+    "color": "default",
+    "isHidden": false,
     "generateOptions": true,
     "readPreviousOptions": false,
     "card": {
       "title": "Room",
       "text": "You enter a room.",
+      "image": {
+        "smallImageUrl": null,
+        "largeImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You enter a room. What would you like to do?",
+      "prompt": ""
+    },
+    "options": []
+  },
+  {
+    "id": 75,
+    "color": "default",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": false,
+    "card": {
+      "title": "Go West",
+      "text": "North or South",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "In the Clearing there are 2 more paths. Either North or South,",
+      "prompt": ""
+    },
+    "options": [
+      {
+        "sceneId": 25,
+        "utterances": [
+          "go south"
+        ]
+      },
+      {
+        "sceneId": 76,
+        "utterances": [
+          "open door"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 76,
+    "color": "default",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": false,
+    "card": {
+      "title": "South",
+      "text": "Unfortunately, you find yourself in the middle of Greek-Persian war. A great war that occurred between the Spartans of Greece, who were only 500 strong, versus the 1000's of soldiers of Persia. \n\nGame Over.",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "Unfortunately, you find yourself in the middle of Greek-Persian war. A great war that occurred between the Spartans of Greece, who were only 500 strong, versus the 1000's of soldiers of Persia. \n\nGame Over.",
+      "prompt": ""
+    },
+    "options": []
+  },
+  {
+    "id": 77,
+    "color": "default",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": false,
+    "card": {
+      "title": "No",
+      "text": "This is incorrect. Geometry does have to do with the study of shapes.\n\nGame Over",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "This is incorrect. Geometry does have to do with the study of shapes.\n\nGame Over",
+      "prompt": ""
+    },
+    "options": []
+  },
+  {
+    "id": 78,
+    "color": "default",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": false,
+    "card": {
+      "title": "Yes",
+      "text": "The study of Geometry has to do with shapes, but also includes a lot more! The Greeks were pioneers of this study. Say \"continue\" to go to question 2",
       "prompt": "",
       "image": {
         "largeImageUrl": null,
@@ -487,6 +2238,117 @@
     "voice": {
       "intro": "You enter a room. What would you like to do?",
       "prompt": ""
+    },
+    "options": [
+      {
+        "sceneId": 79,
+        "utterances": [
+          "continue"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 79,
+    "color": "default",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": false,
+    "card": {
+      "title": "What do the Greeks Speak",
+      "text": "Do the Greeks speak Latin? Yes or No?",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "Do the Greeks speak Latin? Yes or No?",
+      "prompt": ""
+    },
+    "options": [
+      {
+        "sceneId": 80,
+        "utterances": [
+          "yes"
+        ]
+      },
+      {
+        "sceneId": 81,
+        "utterances": [
+          "no"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 80,
+    "color": "default",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": false,
+    "card": {
+      "title": "Yes",
+      "text": "This is incorrect. The Sphinx ascends upon the town!\n\nGame Over",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "This is incorrect. The Sphinx ascends upon the town!\n\nGame Over",
+      "prompt": ""
+    },
+    "options": []
+  },
+  {
+    "id": 81,
+    "color": "default",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": false,
+    "card": {
+      "title": "No",
+      "text": "This is correct, the Greeks spoke... Greek, or to be more precise, Attic Greek. To learn more, ask Alexa about Greek! To continue, say \"continue\".",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "This is correct, the Greeks spoke... Greek, or to be more precise, Attic Greek. To learn more, ask Alexa about Greek! To continue, say \"continue\".",
+      "prompt": ""
+    },
+    "options": [
+      {
+        "sceneId": 82,
+        "utterances": [
+          "continue"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 82,
+    "color": "default",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": false,
+    "card": {
+      "title": "Chinese Empire",
+      "text": "The sphinx waves its hand... and suddenly you are in your time machine, traveling, hopefully, back to your home.",
+      "prompt": "(Say continue.)",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "The sphinx waves its hand... and suddenly you are in your time machine, traveling, hopefully, back to your home.",
+      "prompt": "(Say continue to hopefully return home.)"
     },
     "options": []
   }

@@ -16,6 +16,9 @@
       "intent": "DoNotDoItIntent"
     },
     {
+      "intent": "ChangeLaterIntent"
+    },
+    {
       "intent": "YesIntent"
     },
     {
@@ -25,13 +28,25 @@
       "intent": "SmashItIntent"
     },
     {
-      "intent": "PayWithLedgerIntent"
+      "intent": "PayWithBitCoinIntent"
+    },
+    {
+      "intent": "PayWithU.s.DollarIntent"
+    },
+    {
+      "intent": "LookAroundIntent"
+    },
+    {
+      "intent": "GetACardIntent"
     },
     {
       "intent": "Alexa,TellMeMoreAboutTheGreekSphinxIntent"
     },
     {
       "intent": "ContinueIntent"
+    },
+    {
+      "intent": "ReturnIntent"
     },
     {
       "intent": "Alexa,WhatIsGeometryIntent"
@@ -41,6 +56,84 @@
     },
     {
       "intent": "GoHomeIntent"
+    },
+    {
+      "intent": "GoNorthIntent"
+    },
+    {
+      "intent": "GoSouthIntent"
+    },
+    {
+      "intent": "GoWestIntent"
+    },
+    {
+      "intent": "GoOutsideIntent"
+    },
+    {
+      "intent": "StayInsideIntent"
+    },
+    {
+      "intent": "GetOutIntent"
+    },
+    {
+      "intent": "HideIntent"
+    },
+    {
+      "intent": "HoldHandsUpIntent"
+    },
+    {
+      "intent": "FixTheTimeMachineIntent"
+    },
+    {
+      "intent": "RespondIntent"
+    },
+    {
+      "intent": "StaySilentIntent"
+    },
+    {
+      "intent": "EatWithEmperorIntent"
+    },
+    {
+      "intent": "ExploreMoreIntent"
+    },
+    {
+      "intent": "SettleDownIntent"
+    },
+    {
+      "intent": "ExploreIntent"
+    },
+    {
+      "intent": "FindAWayHomeIntent"
+    },
+    {
+      "intent": "DeclineIntent"
+    },
+    {
+      "intent": "AcceptIntent"
+    },
+    {
+      "intent": "AcceptTheGiftIntent"
+    },
+    {
+      "intent": "YouAcceptIntent"
+    },
+    {
+      "intent": "GoToFestivalIntent"
+    },
+    {
+      "intent": "LeaveIntent"
+    },
+    {
+      "intent": "OneIntent"
+    },
+    {
+      "intent": "TwoIntent"
+    },
+    {
+      "intent": "GoToSpaceIntent"
+    },
+    {
+      "intent": "OpenDoorIntent"
     },
     {
       "intent": "AMAZON.PreviousIntent"
