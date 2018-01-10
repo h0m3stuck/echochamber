@@ -270,7 +270,7 @@
     "readPreviousOptions": false,
     "card": {
       "title": "You lose",
-      "text": "You enter a room.",
+      "text": "You spend your days meandering, trying to figure out what's going on. Eventually you resign yourself to the fact that you'll never understand.\n\nYou lose.",
       "prompt": "",
       "image": {
         "largeImageUrl": null,
@@ -278,7 +278,7 @@
       }
     },
     "voice": {
-      "intro": "You enter a room. What would you like to do?",
+      "intro": "You spend your days meandering, trying to figure out what's going on. Eventually you resign yourself to the fact that you'll never understand.\n\nYou lose.",
       "prompt": ""
     },
     "options": []
@@ -337,10 +337,15 @@
       }
     },
     "voice": {
-      "intro": "You enter a room. What would you like to do?",
-      "prompt": ""
+      "intro": "Uh, you don’t have any? Nor do you have this weird “hardware wallet” device, as it suggests. It’s probably good that someone sits down next to you, noticing your puzzled expression.",
+      "prompt": "Do you talk to them?"
     },
-    "options": []
+    "options": [
+      {
+        "sceneId": 8,
+        "utterances": [ "yes" ]
+      }
+    ]
   },
   {
     "id": 10,
@@ -361,7 +366,20 @@
       "intro": "“HULKKKK SMAASH”. For some reason, after breaking the item, you end up being able to understand everything?\n\nHe says, in an old gravelly tone, “Are you here to save us from the monster?\"",
       "prompt": "Yes, no… answer quickly!"
     },
-    "options": []
+    "options": [
+      {
+        "sceneId": 11,
+        "utterances": [
+          "yes"
+        ]
+      },
+      {
+        "sceneId": 20,
+        "utterances": [
+          "no"
+        ]
+      }
+    ]
   },
   {
     "id": 11,
@@ -427,7 +445,7 @@
     },
     "options": [
       {
-        "sceneId": 17,
+        "sceneId": 13,
         "utterances": [
           "return"
         ]
@@ -450,8 +468,8 @@
       }
     },
     "voice": {
-      "intro": "You enter a room. What would you like to do?",
-      "prompt": ""
+      "intro": "The man arms you with all the necessary components to get through the lair. The Greeks are evidently very good at geometry, or the study of shapes, and were able to provide you with a well-working chariot.",
+      "prompt": "If you would like to be able to do the same, ask Alexa about geometry. Otherwise, enter the lair."
     },
     "options": [
       {
@@ -504,7 +522,7 @@
     },
     "options": [
       {
-        "sceneId": 18,
+        "sceneId": 13,
         "utterances": [
           "return"
         ]
@@ -561,46 +579,6 @@
     "options": []
   },
   {
-    "id": 17,
-    "color": "default",
-    "isHidden": false,
-    "generateOptions": true,
-    "readPreviousOptions": false,
-    "card": {
-      "title": "Room",
-      "text": "You enter a room.",
-      "image": {
-        "smallImageUrl": null,
-        "largeImageUrl": null
-      }
-    },
-    "voice": {
-      "intro": "You enter a room. What would you like to do?",
-      "prompt": ""
-    },
-    "options": []
-  },
-  {
-    "id": 18,
-    "color": "default",
-    "isHidden": false,
-    "generateOptions": true,
-    "readPreviousOptions": false,
-    "card": {
-      "title": "Room",
-      "text": "You enter a room.",
-      "image": {
-        "smallImageUrl": null,
-        "largeImageUrl": null
-      }
-    },
-    "voice": {
-      "intro": "You enter a room. What would you like to do?",
-      "prompt": ""
-    },
-    "options": []
-  },
-  {
     "id": 19,
     "color": "default",
     "isHidden": false,
@@ -616,7 +594,7 @@
       }
     },
     "voice": {
-      "intro": "You enter a room. What would you like to do?",
+      "intro": "Question one! Is the study of Geometry about shapes?",
       "prompt": ""
     },
     "options": [
@@ -650,7 +628,7 @@
       }
     },
     "voice": {
-      "intro": "You enter a room. What would you like to do?",
+      "intro": "You run away into a maze like forest. It is pitch black and you are having trouble seeing things.",
       "prompt": ""
     },
     "options": [
@@ -682,7 +660,7 @@
     "readPreviousOptions": false,
     "card": {
       "title": "Good",
-      "text": "You enter a room.",
+      "text": "You go north but find nothing, so you go back and head east.",
       "prompt": "",
       "image": {
         "largeImageUrl": null,
@@ -874,7 +852,7 @@
     "readPreviousOptions": true,
     "card": {
       "title": "Do not check GPS",
-      "text": "Seemed pointless anyways considering the fact that satellites may not even exist yet. You suddenly head multiple footsteps behind you. You hear some sounds behind you. gasping, most likely in shock. Makes sense considering you’re in a magical tube of steel. Considering that this is most likely not your home country, you turn on your translator. Do you get out or hide?",
+      "text": "Seemed pointless anyways considering the fact that satellites may not even exist yet. You suddenly hear multiple footsteps behind you. You hear some sounds behind you. gasping, most likely in shock. Makes sense considering you’re in a magical tube of steel. Considering that this is most likely not your home country, you turn on your translator. Do you get out or hide?",
       "prompt": "",
       "image": {
         "largeImageUrl": null,
@@ -882,7 +860,7 @@
       }
     },
     "voice": {
-      "intro": "You enter a room. What would you like to do?",
+      "intro": "Seemed pointless anyways considering the fact that satellites may not even exist yet. You suddenly head multiple footsteps behind you. You hear some sounds behind you. gasping, most likely in shock. Makes sense considering you’re in a magical tube of steel. Considering that this is most likely not your home country, you turn on your translator. Do you get out or hide?",
       "prompt": ""
     },
     "options": [
@@ -1311,9 +1289,16 @@
     },
     "voice": {
       "intro": "You accept the emperor's gift and you receive gunpowder. This is just what you needed! You go back to your time machine and travel to the future!",
-      "prompt": ""
+      "prompt": "Say continue to enter the next era."
     },
-    "options": []
+    "options": [
+      {
+        "sceneId": 5,
+        "utterances": [
+          "continue"
+        ]
+      }
+    ]
   },
   {
     "id": 43,
@@ -1355,7 +1340,12 @@
       "intro": "You accept the emperor's gift and you receive gunpowder. This is just what you needed! You go back to your time machine and travel to the future!",
       "prompt": ""
     },
-    "options": []
+    "options": [{
+      "sceneId": 5,
+      "utterances": [
+        "continue"
+      ]
+    }]
   },
   {
     "id": 45,
@@ -1911,10 +1901,17 @@
       }
     },
     "voice": {
-      "intro": "You enter a room. What would you like to do?",
-      "prompt": ""
+      "intro": "You insert a $20 bill, brand new, from 2018.",
+      "prompt": "Say continue for what happens next."
     },
-    "options": []
+    "options": [
+      {
+        "sceneId": 8,
+        "utterances": [
+          "continue"
+        ]
+      }
+    ]
   },
   {
     "id": 67,
@@ -1935,7 +1932,17 @@
       "intro": "The building is a soaring, glass-walled marvel, with aging banners proclaiming ZERO NET ENERGY — SOLVE CLIMATE CHANGE 2050 on them. “We should really take those down,” your new acquaintance says to you. “The whole country’s switched over to green energy for a while now. Well, except for Rhode Island. I really wish we didn’t need so many desalination plants, though,” he remarks, pointing out a row of towers on the horizon, “they’re such an eyesore. Necessary, considering our contamination of the water supply, but annoying.”",
       "prompt": "Say return to return."
     },
-    "options": []
+    "options": [
+      {
+        "sceneId": 68,
+        "utterances": [
+          "get a card",
+          "buy a card",
+          "get a bitcoin card",
+          "get a payment card"
+        ]
+      }
+    ]
   },
   {
     "id": 68,
@@ -2135,15 +2142,15 @@
     "generateOptions": true,
     "readPreviousOptions": false,
     "card": {
-      "title": "Room",
-      "text": "You enter a room.",
+      "title": "Home.",
+      "text": "You spend your last millions on fully repairing the time machine. (You give the schematics to NASA for future usage.) Finally, you go home. YOU WIN!",
       "image": {
         "smallImageUrl": null,
         "largeImageUrl": null
       }
     },
     "voice": {
-      "intro": "You enter a room. What would you like to do?",
+      "intro": "You spend your last millions on fully repairing the time machine. (You give the schematics to NASA for future usage.) Finally, you go home. YOU WIN!",
       "prompt": ""
     },
     "options": []
@@ -2232,16 +2239,16 @@
     "readPreviousOptions": false,
     "card": {
       "title": "Yes",
-      "text": "The study of Geometry has to do with shapes, but also includes a lot more! The Greeks were pioneers of this study. Say \"continue\" to go to question 2",
-      "prompt": "",
+      "text": "The study of Geometry has to do with shapes, but also includes a lot more! The Greeks were pioneers of this study.",
+      "prompt": "Say continue to go to question two.",
       "image": {
         "largeImageUrl": null,
         "smallImageUrl": null
       }
     },
     "voice": {
-      "intro": "You enter a room. What would you like to do?",
-      "prompt": ""
+      "intro": "The study of Geometry has to do with shapes, but also includes a lot more! The Greeks were pioneers of this study.",
+      "prompt": "Say continue to go to question two."
     },
     "options": [
       {
@@ -2260,16 +2267,16 @@
     "readPreviousOptions": false,
     "card": {
       "title": "What do the Greeks Speak",
-      "text": "Do the Greeks speak Latin? Yes or No?",
-      "prompt": "",
+      "text": "Do the Greeks speak Latin?",
+      "prompt": "Yes or no?",
       "image": {
         "largeImageUrl": null,
         "smallImageUrl": null
       }
     },
     "voice": {
-      "intro": "Do the Greeks speak Latin? Yes or No?",
-      "prompt": ""
+      "intro": "Do the Greeks speak Latin?",
+      "prompt": "Yes or no?"
     },
     "options": [
       {
@@ -2354,6 +2361,11 @@
       "intro": "The sphinx waves its hand... and suddenly you are in your time machine, traveling, hopefully, back to your home.",
       "prompt": "(Say continue to hopefully return home.)"
     },
-    "options": []
+    "options": [{
+      "sceneId": 5,
+      "utterances": [
+        "continue"
+      ]
+    }]
   }
 ]

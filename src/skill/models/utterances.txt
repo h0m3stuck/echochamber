@@ -37,12 +37,12 @@ PayWithBitCoinIntent pay with bitcoin
 PayWithBitCoinIntent pay using bit coin
 PayWithBitCoinIntent pay using bitcoin
 PayWithBitCoinIntent pay using bitcoin
-PayWithU.s.DollarIntent pay with u.s. dollar
-PayWithU.s.DollarIntent pay with us dollar
-PayWithU.s.DollarIntent pay with legacy
-PayWithU.s.DollarIntent pay legacy
-PayWithU.s.DollarIntent pay with usd
-PayWithU.s.DollarIntent pay with dollars
+PayWithUSDollar pay with u.s. dollar
+PayWithUSDollar pay with us dollar
+PayWithUSDollar pay with legacy
+PayWithUSDollar pay legacy
+PayWithUSDollar pay with usd
+PayWithUSDollar pay with dollars
 LookAroundIntent look around
 LookAroundIntent look
 LookAroundIntent what is around

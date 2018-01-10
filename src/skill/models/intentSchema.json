@@ -31,7 +31,7 @@
       "intent": "PayWithBitCoinIntent"
     },
     {
-      "intent": "PayWithU.s.DollarIntent"
+      "intent": "PayWithUSDollarIntent"
     },
     {
       "intent": "LookAroundIntent"

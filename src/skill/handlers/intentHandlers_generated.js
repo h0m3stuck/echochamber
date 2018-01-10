@@ -31,7 +31,7 @@ module.exports = {
 	"PayWithBitCoinIntent": function () {
 		processUtterance(this, "pay with bit coin" )
 	},
-	"PayWithU.s.DollarIntent": function () {
+	"PayWithUSDollarIntent": function () {
 		processUtterance(this, "pay with u.s. dollar" )
 	},
 	"LookAroundIntent": function () {
