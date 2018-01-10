@@ -6,7 +6,7 @@
     "readPreviousOptions": false,
     "card": {
       "title": "Welcome",
-      "text": "Welcome to my Alexa Skill. To learn how to use this skill, say \"Help\".",
+      "text": "Welcome to the Echochamber. To learn how to use this skill, say \"Help\".",
       "prompt": "",
       "image": {
         "largeImageUrl": null,
@@ -14,13 +14,17 @@
       }
     },
     "voice": {
-      "intro": "Welcome to my Alexa Skill. To learn how to use this skill, say \"Help\".",
-      "prompt": "When you are ready, say \"Begin\"."
+      "intro": "Welcome to the Echochamber.",
+      "prompt": "When you are ready to begin the game, step into the time machine."
     },
     "options": [
       {
         "utterances": [
-          "begin"
+          "begin",
+          "step into the time machine",
+          "enter the time machine",
+          "step in",
+          "enter"
         ],
         "sceneId": 1
       }
@@ -32,8 +36,8 @@
     "isHidden": false,
     "readPreviousOptions": false,
     "card": {
-      "title": "Welcome",
-      "text": "You enter a room with three doors each with a distinct number on it. Which door would you like to open?",
+      "title": "> Finish the time machine.",
+      "text": "",
       "prompt": "",
       "image": {
         "largeImageUrl": null,
@@ -41,70 +45,49 @@
       }
     },
     "voice": {
-      "intro": "You enter a room with three doors, each with a distinct number on it. Which door would you like to open?",
-      "prompt": ""
+      "intro": "Welcome to the Echochamber! The game has now begun.\n\nA time machine. A fantastical object that you have created. You step into the machine, with your toolbox, looking to finish up the final touches.",
+      "prompt": "Would you like to finish up the back of the machine, or the front?"
     },
     "options": [
       {
         "utterances": [
-          "open door 1"
+          "the front",
+          "finish up the front",
+          "the front of the time machine",
+          "finish up the front of the time machine",
+          "finish the front",
+          "finish the front of the time machine"
         ],
         "sceneId": 2
       },
       {
         "utterances": [
-          "open door 2"
-        ],
-        "sceneId": 3
-      },
-      {
-        "utterances": [
-          "open door 3"
-        ],
-        "sceneId": 4
-      },
-      {
-        "utterances": [
-          "open door 4"
+          "the back",
+          "finish up the back",
+          "the back of the time machine",
+          "finish up the back of the time machine",
+          "finish the back",
+          "finish the back of the time machine"
         ],
         "sceneId": 5
       },
       {
-        "sceneId": 7,
+        "sceneId": 3,
         "utterances": [
-          "open door"
+          "do not do it",
+          "do not turn on the time machine"
         ]
       }
     ]
   },
   {
     "id": 2,
-    "color": "red",
+    "color": "green",
     "isHidden": false,
     "readPreviousOptions": false,
     "card": {
-      "title": "You lose",
-      "text": "Better luck next time.",
-      "prompt": "If you would like to play again say, \"start again.\" Otherwise you can say \"exit skill.\"",
-      "image": {
-        "largeImageUrl": null,
-        "smallImageUrl": null
-      }
-    },
-    "voice": {
-      "intro": "You lose. Better luck next time.",
-      "prompt": "If you would like to play again say, \"start again.\" Otherwise you can say \"exit skill.\""
-    },
-    "options": []
-  },
-  {
-    "id": 3,
-    "color": "yellow",
-    "isHidden": false,
-    "readPreviousOptions": true,
-    "card": {
-      "title": "Locked Door",
-      "text": "This door is locked.",
+      "title": "> Enter: the Greek Empire.",
+      "text": "You fall out of the machine and are greeted by a blinding light. The light of a torch, but not like you imagined. It was fire, and the face of an old man. He smiled, “(in greek) Hello young one.”",
       "prompt": "",
       "image": {
         "largeImageUrl": null,
@@ -112,7 +95,52 @@
       }
     },
     "voice": {
-      "intro": "This door is locked. Maybe you should try one of the other doors.",
+      "intro": "You fall out of the machine and are greeted by a blinding light. The light of a torch, but not like you imagined. It was fire, and the face of an old man. He smiled, “(in greek) Hello young one.”\n\nYou have no idea what he said, or what was going on. Had you accidentally activated the time machine? Looking in your pocket you realize that you still have your translator to understand the international scientists you were working with.",
+      "prompt": "Would you like to activate it?"
+    },
+    "options": [
+      {
+        "sceneId": 4,
+        "utterances": [
+          "yes",
+          "sure",
+          "okay",
+          "let's do it"
+        ]
+      },
+      {
+        "sceneId": 7,
+        "utterances": [
+          "no",
+          "nah",
+          "no thanks"
+        ]
+      },
+      {
+        "sceneId": 10,
+        "utterances": [
+          "smash it"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "color": "green",
+    "isHidden": true,
+    "generateOptions": true,
+    "readPreviousOptions": false,
+    "card": {
+      "title": "You win!",
+      "text": "You avoid all the time-based shenanigans and go back to your ordinary life.",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You avoid all the time-based schenanigans and go back to your ordinary life. Congratulations!",
       "prompt": ""
     },
     "options": []
@@ -121,30 +149,38 @@
     "id": 4,
     "color": "green",
     "isHidden": false,
+    "generateOptions": true,
     "readPreviousOptions": false,
     "card": {
-      "title": "You win",
-      "text": "Congratulations, you've beat my skill!",
-      "prompt": "If you would like to play again say, \"Start again.\" Otherwise you can say \"Exit skill.\"",
+      "title": "> Man: reveal speech.",
+      "text": "You activate your translator, which has only a little charge left, and you start to understand the man’s speech.\n\nHe says, in an old gravelly tone, “Are you here to save us from the monster?\"",
+      "prompt": "Yes, no... answer quickly!",
       "image": {
         "largeImageUrl": null,
         "smallImageUrl": null
       }
     },
     "voice": {
-      "intro": "Congratulations, you've beat my skill!",
-      "prompt": "If you would like to play again say, \"Start again.\" Otherwise you can say \"Exit skill.\""
+      "intro": "You activate your translator, which has only a little charge left, and you start to understand the man’s speech. He says, in an old gravelly tone,",
+      "prompt": ""
     },
-    "options": []
+    "options": [
+      {
+        "sceneId": 11,
+        "utterances": [
+          "yes"
+        ]
+      }
+    ]
   },
   {
     "id": 5,
-    "color": "default",
-    "isHidden": true,
+    "color": "green",
+    "isHidden": false,
     "readPreviousOptions": false,
     "card": {
-      "title": "Secret Room",
-      "text": "Congratulations, you've found a secret room. You look around and see a single door with a star on it.",
+      "title": "> Enter: the Future, c. 2055 CE.",
+      "text": "",
       "prompt": "",
       "image": {
         "largeImageUrl": null,
@@ -152,14 +188,20 @@
       }
     },
     "voice": {
-      "intro": "Congratulations, you've found a secret room. You look around and see a single door with a star on it.",
-      "prompt": ""
+      "intro": "You step out of your time machine and find yourself on the sidewalk of what is seemingly a major metropolitan district. The cars on the street rush by you, but in a solid formation, as if they all coordinated to move in unison.\n\nYou look around for any street sign to see where you are, and then realize that there are none. Nor are there any traffic lights, bizarrely. At the intersection, the cars just zip past each other without turn signals or traffic lights. Remarkably, there are no crashes.\n\nExasperated, you wave your hands in the air, disturbing some passersby who grumble and then look back at their paper-thin phones. However, a bus suddenly breaks formation and does a perfect parallel park near you. You must have signaled to them by accident?",
+      "prompt": "Get in the bus?"
     },
     "options": [
       {
         "sceneId": 6,
         "utterances": [
-          "open door 5"
+          "yes"
+        ]
+      },
+      {
+        "sceneId": 8,
+        "utterances": [
+          "no"
         ]
       }
     ]
@@ -171,9 +213,9 @@
     "generateOptions": true,
     "readPreviousOptions": false,
     "card": {
-      "title": "Room",
-      "text": "You win!",
-      "prompt": "If you would like to play again say, \"Start again.\" Otherwise you can say \"Exit skill.\"",
+      "title": "> Get in the bus",
+      "text": "You get in. Taking your seat, a display flashes to life in front of you, requesting for a payment of… 2.0 * 10^-6 Ethereum? In a pictograph on the side, it suggests placing a U.S. Ledger Pico X card in the card slot. There’s also an option to Pay with Legacy US Dollar.",
+      "prompt": "You're really confused right now.",
       "image": {
         "largeImageUrl": null,
         "smallImageUrl": null
@@ -183,10 +225,39 @@
       "intro": "You win!",
       "prompt": "If you would like to play again say, \"Start again.\" Otherwise you can say \"Exit skill.\""
     },
-    "options": []
+    "options": [
+      {
+        "sceneId": 9,
+        "utterances": [
+          "pay with ledger",
+          "pay"
+        ]
+      }
+    ]
   },
   {
     "id": 7,
+    "color": "red",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": false,
+    "card": {
+      "title": "You lose",
+      "text": "You enter a room.",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You enter a room. What would you like to do?",
+      "prompt": ""
+    },
+    "options": []
+  },
+  {
+    "id": 8,
     "color": "default",
     "isHidden": false,
     "generateOptions": true,
@@ -197,6 +268,220 @@
       "image": {
         "smallImageUrl": null,
         "largeImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You enter a room. What would you like to do?",
+      "prompt": ""
+    },
+    "options": []
+  },
+  {
+    "id": 9,
+    "color": "default",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": false,
+    "card": {
+      "title": "Room",
+      "text": "You put in a brand-new, 2018 $20 bill. The display accepts it, though not without a little grumbling, and returns to you a voucher for 1.2 * 10^-6 ETH as change. Redeemable on any currency exchange website, it says.\n\nAt this point you’re really confused and it’s probably a good thing that someone sits down next to you right now, noticing your puzzled expression.",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You enter a room. What would you like to do?",
+      "prompt": ""
+    },
+    "options": []
+  },
+  {
+    "id": 10,
+    "color": "default",
+    "isHidden": true,
+    "generateOptions": true,
+    "readPreviousOptions": false,
+    "card": {
+      "title": "> Man: reveal speech.",
+      "text": "“HULKKKK SMAASH”. For some reason, after breaking the item, you end up being able to understand everything?",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "“HULKKKK SMAASH”. For some reason, after breaking the item, you end up being able to understand everything?\n\nHe says, in an old gravelly tone, “Are you here to save us from the monster?\"",
+      "prompt": "Yes, no… answer quickly!"
+    },
+    "options": []
+  },
+  {
+    "id": 11,
+    "color": "green",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": false,
+    "card": {
+      "title": "> Man: give quest.",
+      "text": "“Thank you, good traveler.” Now enter the Sphinx’s lair! But, be warned. This is a Greek Monster… it challenged even Oedipus, one of the smartest to ever exist, in its riddles. If you would like to learn more, say, “Alexa, tell me about the Greek Sphinx”.",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "“Thank you, good traveler.” Now enter the Sphinx’s lair! But, be warned. This is a Greek Monster… it challenged even Oedipus, one of the smartest to ever exist, in its riddles.",
+      "prompt": "If you would like to learn more, say, “Alexa, tell me about the Greek Sphinx”. Otherwise, just continue."
+    },
+    "options": [
+      {
+        "sceneId": 12,
+        "utterances": [
+          "alexa, tell me more about the greek sphinx",
+          "alexa, tell me about the greek sphinx"
+        ]
+      },
+      {
+        "sceneId": 13,
+        "utterances": [
+          "continue",
+          "keep going",
+          "move on",
+          "get ready",
+          "go"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "color": "yellow",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": false,
+    "card": {
+      "title": "The Greek Sphinx",
+      "text": "According to Wikipedia:\n\nA sphinx (Ancient Greek: Σφίγξ [spʰíŋks], Boeotian: Φίξ [pʰíːks], plural sphinxes or sphinges) is a mythical creature with the head of a human and the body of a lion.\n\nIn Greek tradition, it has the head of a human, the haunches of a lion, and sometimes the wings of a bird. It is mythicised as treacherous and merciless. Those who cannot answer its riddle suffer a fate typical in such mythological stories, as they are killed and eaten by this ravenous monster.",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "A sphinx is a mythical creature with the head of a human and the body of a lion.\n\nIn Greek tradition, it has the head of a human, the haunches of a lion, and sometimes the wings of a bird. It is mythicised as treacherous and merciless. Those who cannot answer its riddle suffer a fate typical in such mythological stories, as they are killed and eaten by this ravenous monster.",
+      "prompt": "Say return to go back."
+    },
+    "options": []
+  },
+  {
+    "id": 13,
+    "color": "green",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": false,
+    "card": {
+      "title": "> Man: prepare the young one.",
+      "text": "The man arms you with all the necessary components to get through the lair. The Greeks are evidently very good at geometry, or the study of shapes, and were able to provide you with a well-working chariot.",
+      "prompt": "If you would like to be able to do the same, ask Alexa about geometry. Otherwise, enter the lair.",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You enter a room. What would you like to do?",
+      "prompt": ""
+    },
+    "options": [
+      {
+        "sceneId": 14,
+        "utterances": [
+          "alexa, what is geometry",
+          "tell me more about geometry",
+          "tell me about geometry",
+          "what is geometry"
+        ]
+      },
+      {
+        "sceneId": 15,
+        "utterances": [
+          "enter the lair",
+          "enter lair",
+          "move into the lair",
+          "go in"
+        ]
+      },
+      {
+        "sceneId": 16,
+        "utterances": [
+          "go home",
+          "no go home",
+          "please go home",
+          "i want to go home"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "color": "yellow",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": false,
+    "card": {
+      "title": "Room",
+      "text": "You enter a room.",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You enter a room. What would you like to do?",
+      "prompt": ""
+    },
+    "options": []
+  },
+  {
+    "id": 15,
+    "color": "green",
+    "isHidden": false,
+    "generateOptions": true,
+    "readPreviousOptions": false,
+    "card": {
+      "title": "Room",
+      "text": "You enter a room.",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
+      }
+    },
+    "voice": {
+      "intro": "You enter a room. What would you like to do?",
+      "prompt": ""
+    },
+    "options": []
+  },
+  {
+    "id": 16,
+    "color": "default",
+    "isHidden": true,
+    "generateOptions": true,
+    "readPreviousOptions": false,
+    "card": {
+      "title": "Room",
+      "text": "You enter a room.",
+      "prompt": "",
+      "image": {
+        "largeImageUrl": null,
+        "smallImageUrl": null
       }
     },
     "voice": {

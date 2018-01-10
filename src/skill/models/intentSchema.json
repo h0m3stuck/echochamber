@@ -7,22 +7,40 @@
       "intent": "BeginIntent"
     },
     {
-      "intent": "OpenDoorOneIntent"
+      "intent": "TheFrontIntent"
     },
     {
-      "intent": "OpenDoorTwoIntent"
+      "intent": "TheBackIntent"
     },
     {
-      "intent": "OpenDoorThreeIntent"
+      "intent": "DoNotDoItIntent"
     },
     {
-      "intent": "OpenDoorFourIntent"
+      "intent": "YesIntent"
     },
     {
-      "intent": "OpenDoorIntent"
+      "intent": "NoIntent"
     },
     {
-      "intent": "OpenDoorFiveIntent"
+      "intent": "SmashItIntent"
+    },
+    {
+      "intent": "PayWithLedgerIntent"
+    },
+    {
+      "intent": "Alexa,TellMeMoreAboutTheGreekSphinxIntent"
+    },
+    {
+      "intent": "ContinueIntent"
+    },
+    {
+      "intent": "Alexa,WhatIsGeometryIntent"
+    },
+    {
+      "intent": "EnterTheLairIntent"
+    },
+    {
+      "intent": "GoHomeIntent"
     },
     {
       "intent": "AMAZON.PreviousIntent"

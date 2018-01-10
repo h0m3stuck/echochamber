@@ -1,8 +1,52 @@
 RepeatOptionsIntent repeat options
 BeginIntent begin
-OpenDoorOneIntent open door one
-OpenDoorTwoIntent open door two
-OpenDoorThreeIntent open door three
-OpenDoorFourIntent open door four
-OpenDoorIntent open door
-OpenDoorFiveIntent open door five
+BeginIntent step into the time machine
+BeginIntent enter the time machine
+BeginIntent step in
+BeginIntent enter
+TheFrontIntent the front
+TheFrontIntent finish up the front
+TheFrontIntent the front of the time machine
+TheFrontIntent finish up the front of the time machine
+TheFrontIntent finish the front
+TheFrontIntent finish the front of the time machine
+TheBackIntent the back
+TheBackIntent finish up the back
+TheBackIntent the back of the time machine
+TheBackIntent finish up the back of the time machine
+TheBackIntent finish the back
+TheBackIntent finish the back of the time machine
+DoNotDoItIntent do not do it
+DoNotDoItIntent do not turn on the time machine
+YesIntent yes
+YesIntent sure
+YesIntent okay
+YesIntent let's do it
+NoIntent no
+NoIntent nah
+NoIntent no thanks
+SmashItIntent smash it
+YesIntent yes
+YesIntent yes
+NoIntent no
+PayWithLedgerIntent pay with ledger
+PayWithLedgerIntent pay
+Alexa,TellMeMoreAboutTheGreekSphinxIntent alexa, tell me more about the greek sphinx
+Alexa,TellMeMoreAboutTheGreekSphinxIntent alexa, tell me about the greek sphinx
+ContinueIntent continue
+ContinueIntent keep going
+ContinueIntent move on
+ContinueIntent get ready
+ContinueIntent go
+Alexa,WhatIsGeometryIntent alexa, what is geometry
+Alexa,WhatIsGeometryIntent tell me more about geometry
+Alexa,WhatIsGeometryIntent tell me about geometry
+Alexa,WhatIsGeometryIntent what is geometry
+EnterTheLairIntent enter the lair
+EnterTheLairIntent enter lair
+EnterTheLairIntent move into the lair
+EnterTheLairIntent go in
+GoHomeIntent go home
+GoHomeIntent no go home
+GoHomeIntent please go home
+GoHomeIntent i want to go home

@@ -55,8 +55,8 @@
       "generateOptions": false,
       "readPreviousOptions": false,
       "card": {
-        "title": "Good bye",
-        "text": "Thank you for using My Alexa Skill.",
+        "title": "> Exit the echochamber.",
+        "text": "Thanks for playing!",
         "prompt": "",
         "image": {
           "largeImageUrl": null,
@@ -64,7 +64,7 @@
         }
       },
       "voice": {
-        "intro": "Thank you for using My Alexa Skill.",
+        "intro": "Thanks for playing!",
         "prompt": "Goodbye."
       }
     }

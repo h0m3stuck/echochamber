@@ -7,22 +7,40 @@ module.exports = {
 	"BeginIntent": function () {
 		processUtterance(this, "begin" )
 	},
-	"OpenDoorOneIntent": function () {
-		processUtterance(this, "open door 1" )
+	"TheFrontIntent": function () {
+		processUtterance(this, "the front" )
 	},
-	"OpenDoorTwoIntent": function () {
-		processUtterance(this, "open door 2" )
+	"TheBackIntent": function () {
+		processUtterance(this, "the back" )
 	},
-	"OpenDoorThreeIntent": function () {
-		processUtterance(this, "open door 3" )
+	"DoNotDoItIntent": function () {
+		processUtterance(this, "do not do it" )
 	},
-	"OpenDoorFourIntent": function () {
-		processUtterance(this, "open door 4" )
+	"YesIntent": function () {
+		processUtterance(this, "yes" )
 	},
-	"OpenDoorIntent": function () {
-		processUtterance(this, "open door" )
+	"NoIntent": function () {
+		processUtterance(this, "no" )
 	},
-	"OpenDoorFiveIntent": function () {
-		processUtterance(this, "open door 5" )
+	"SmashItIntent": function () {
+		processUtterance(this, "smash it" )
+	},
+	"PayWithLedgerIntent": function () {
+		processUtterance(this, "pay with ledger" )
+	},
+	"Alexa,TellMeMoreAboutTheGreekSphinxIntent": function () {
+		processUtterance(this, "alexa, tell me more about the greek sphinx" )
+	},
+	"ContinueIntent": function () {
+		processUtterance(this, "continue" )
+	},
+	"Alexa,WhatIsGeometryIntent": function () {
+		processUtterance(this, "alexa, what is geometry" )
+	},
+	"EnterTheLairIntent": function () {
+		processUtterance(this, "enter the lair" )
+	},
+	"GoHomeIntent": function () {
+		processUtterance(this, "go home" )
 	},
 }
