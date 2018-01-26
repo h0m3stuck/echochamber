@@ -6,7 +6,7 @@
     "readPreviousOptions": false,
     "card": {
       "title": "Welcome",
-      "text": "Welcome to the Echochamber. To learn how to use this skill, say \"Help\".",
+      "text": "Welcome to the Time Capsule. To learn how to use this skill, say \"Help\".",
       "prompt": "",
       "image": {
         "largeImageUrl": null,
@@ -14,7 +14,7 @@
       }
     },
     "voice": {
-      "intro": "Welcome to the Echochamber.",
+      "intro": "Welcome to the Time Capsule.",
       "prompt": "When you are ready to begin the game, step into the time machine."
     },
     "options": [
@@ -45,7 +45,7 @@
       }
     },
     "voice": {
-      "intro": "Welcome to the Echochamber! The game has now begun.\n\nA time machine. A fantastical object that you have created. You step into the machine, with your toolbox, looking to finish up the final touches.",
+      "intro": "Welcome to the Time Capsule! The game has now begun.\n\nA time machine. A fantastical object that you have created. You step into the machine, with your toolbox, looking to finish up the final touches.",
       "prompt": "Would you like to finish up the back of the machine, or the front?"
     },
     "options": [
