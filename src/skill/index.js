@@ -9,7 +9,7 @@ var intentHandlers_default = require('./handlers/intentHandlers_default')
 
 exports.handler = function(event, context, callback) {
     var alexa = Alexa.handler(event, context);
-    alexa.APP_ID = config.applicationId;
+    alexa.appId = config.applicationId;
     // To enable string internationalization (i18n) features, set a resources object.
 
     alexa.registerHandlers(

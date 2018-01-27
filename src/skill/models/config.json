@@ -1,9 +1,9 @@
 {
-  "applicationId": null,
-  "awsProfileName": "",
-  "skillName": "My Alexa Skill",
-  "lambdaName": "adventureTool_david",
-  "dynamoTableName": "",
+  "applicationId": "amzn1.ask.skill.d5a9d576-2b5e-4c3d-a744-8d536d4d22f1",
+  "awsProfileName": "EchochamberRole",
+  "skillName": "Time Capsule",
+  "lambdaName": "EchochamberFn",
+  "dynamoTableName": "EchochamberTable",
   "dynamoRegion": "us-east-1",
   "commands": {
     "RepeatOptionsIntent": [
@@ -55,7 +55,7 @@
       "generateOptions": false,
       "readPreviousOptions": false,
       "card": {
-        "title": "> Exit the time capsule.",
+        "title": "Exit the time capsule.",
         "text": "Thanks for playing!",
         "prompt": "",
         "image": {
@@ -69,5 +69,5 @@
       }
     }
   },
-  "undefined": "My Alexa Skill"
+  "undefined": "Time Capsule"
 }
