@@ -235,7 +235,7 @@
     },
     "voice": {
       "intro": "You win!",
-      "prompt": "If you would like to play again say, \"Start again.\" Otherwise you can say \"Exit skill.\""
+      "prompt": "If you would like to play again say, \"Start again.\" Otherwise you can say \"exit.\""
     },
     "options": [
       {
